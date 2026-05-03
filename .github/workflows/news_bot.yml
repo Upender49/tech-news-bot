@@ -1,0 +1,40 @@
+name: Tech News Bot
+
+on:
+  # ── Scheduled trigger: every 3 hours ──────────────────────────────────────
+  schedule:
+    - cron: "0 */3 * * *"   # At minute 0 every 3rd hour (UTC)
+
+  # ── Manual trigger from the GitHub UI (useful for first-time testing) ──────
+  workflow_dispatch:
+
+jobs:
+  send-news:
+    name: Fetch & Send Tech News
+    runs-on: ubuntu-latest
+    timeout-minutes: 10       # Kill the job if it hangs
+
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+      LOG_LEVEL:          INFO
+
+    steps:
+      # 1. Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 4. Run the bot
+      - name: Run tech news bot
+        run: python main.py
