@@ -8,6 +8,10 @@ on:
   # ── Manual trigger from the GitHub UI (useful for first-time testing) ──────
   workflow_dispatch:
 
+# Allow the workflow to commit sent_urls.json back to the repo
+permissions:
+  contents: write
+
 jobs:
   send-news:
     name: Fetch & Send Tech News
@@ -23,6 +27,9 @@ jobs:
       # 1. Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # Fetch full history so we can push back cleanly
+          fetch-depth: 0
 
       # 2. Set up Python
       - name: Set up Python 3.11
@@ -35,6 +42,16 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # 4. Run the bot
+      # 4. Run the bot (fetch → filter → format → send → save sent_urls.json)
       - name: Run tech news bot
         run: python main.py
+
+      # 5. Commit sent_urls.json back so next run knows what was already sent
+      #    [skip ci] prevents this push from triggering another workflow run
+      - name: Save deduplication state
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sent_urls.json
+          git diff --staged --quiet || git commit -m "chore: update sent_urls state [skip ci]"
+          git push
