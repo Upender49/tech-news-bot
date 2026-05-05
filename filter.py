@@ -1,15 +1,16 @@
 """
 filter.py — Content filtering and prioritisation module.
 Applies keyword matching, removes obvious clickbait, caps results,
-and skips articles already sent in a previous run (via seen_urls).
+and skips articles already sent in a previous run via BOTH URL
+and normalised title matching (handles Google News URL rotation).
 """
 
 import logging
 import re
-from typing import Optional
 
 from fetcher import Article
 import config
+from state import _normalise_title   # reuse the same normaliser
 
 logger = logging.getLogger(__name__)
 
@@ -35,34 +36,38 @@ def _keyword_score(article: Article) -> int:
     Higher = more relevant.
     """
     haystack = (article.title + " " + article.description).lower()
-    score = sum(1 for kw in config.FILTER_KEYWORDS if kw in haystack)
-    return score
+    return sum(1 for kw in config.FILTER_KEYWORDS if kw in haystack)
 
 
 def filter_articles(
     articles: list[Article],
-    seen_urls: set[str] | None = None,
+    seen_urls:   set[str] | None = None,
+    seen_titles: set[str] | None = None,
 ) -> list[Article]:
     """
     Filter and rank articles:
-    1. Skip articles already sent in a previous run (seen_urls).
-    2. Remove clickbait titles.
-    3. Score by keyword relevance.
-    4. Keep articles with score >= 1 (at least one keyword match).
-    5. Sort by score descending.
-    6. Cap at MAX_TOTAL_ARTICLES.
+    1. Skip if URL already sent (seen_urls).
+    2. Skip if normalised title already sent (seen_titles) — catches
+       Google News URL rotation of the same article.
+    3. Remove clickbait.
+    4. Score by keyword relevance; drop score-0 articles.
+    5. Sort by score desc, cap at MAX_TOTAL_ARTICLES.
     """
-    seen_urls = seen_urls or set()
+    seen_urls   = seen_urls   or set()
+    seen_titles = seen_titles or set()
+
     scored: list[tuple[int, Article]] = []
     skipped_seen = 0
 
     for article in articles:
-        # ── Skip already-sent articles ─────────────────────────────────────
-        if article.link in seen_urls:
+        # ── Deduplication check (URL + title) ────────────────────────────
+        norm_title = _normalise_title(article.title)
+        if article.link in seen_urls or norm_title in seen_titles:
             skipped_seen += 1
             logger.debug("Dropped (already sent): %s", article.title[:60])
             continue
 
+        # ── Quality checks ────────────────────────────────────────────────
         if _is_clickbait(article.title):
             logger.debug("Dropped (clickbait): %s", article.title[:60])
             continue
@@ -75,17 +80,15 @@ def filter_articles(
         scored.append((score, article))
 
     if skipped_seen:
-        logger.info("Skipped %d articles already sent in previous runs.", skipped_seen)
+        logger.info(
+            "Skipped %d articles already sent (URL or title match).", skipped_seen
+        )
 
-    # Sort by score descending, then keep top N
     scored.sort(key=lambda x: x[0], reverse=True)
     filtered = [art for _, art in scored[: config.MAX_TOTAL_ARTICLES]]
 
     logger.info(
-        "Filtered: %d total → %d new & relevant (max %d, skipped-seen %d).",
-        len(articles),
-        len(filtered),
-        config.MAX_TOTAL_ARTICLES,
-        skipped_seen,
+        "Filtered: %d total → %d new & relevant (max %d, skipped %d).",
+        len(articles), len(filtered), config.MAX_TOTAL_ARTICLES, skipped_seen,
     )
     return filtered

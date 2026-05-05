@@ -39,8 +39,8 @@ filtered = filter_articles(articles)
 print(f"   -> {len(filtered)} articles passed the filter.\n")
 
 print("[Step 3] Formatting message...")
-message = build_message(filtered)
-print(f"   -> Message length: {len(message)} characters.\n")
+message, parse_mode = build_message(filtered)
+print(f"   -> Message length: {len(message)} characters (Mode: {parse_mode}).\n")
 
 print("=" * 60)
 print("  PREVIEW (first 2000 chars):")

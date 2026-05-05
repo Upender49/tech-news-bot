@@ -11,7 +11,7 @@ from fetcher import fetch_all_feeds
 from filter import filter_articles
 from formatter import build_message
 from sender import send_long_message
-from state import load_sent_urls, save_sent_urls
+from state import load_state, save_state
 
 
 def setup_logging() -> None:
@@ -33,31 +33,30 @@ def run() -> None:
         logger.critical("Aborting — fix environment variables first.")
         sys.exit(1)
 
-    # 2. Load previously sent URLs (cross-run deduplication)
-    seen_urls = load_sent_urls()
+    # 2. Load previously sent URLs and titles (cross-run deduplication)
+    seen_urls, seen_titles = load_state()
 
     # 3. Fetch articles from all RSS feeds
     articles = fetch_all_feeds()
     if not articles:
         logger.warning("No articles fetched from any feed.")
 
-    # 4. Filter & rank — skipping already-sent articles
-    filtered = filter_articles(articles, seen_urls=seen_urls)
+    # 4. Filter & rank — skipping already-sent articles (URL or title match)
+    filtered = filter_articles(articles, seen_urls=seen_urls, seen_titles=seen_titles)
 
-    # 5. If nothing new this cycle, exit gracefully (no spam to group)
+    # 5. If nothing new this cycle, exit gracefully
     if not filtered:
         logger.info("No new articles this cycle — all already sent or filtered out. Skipping.")
         sys.exit(0)
 
-    # 6. Format into Telegram message
-    message = build_message(filtered)
+    # 6. Format into Telegram message (HTML mode)
+    message, parse_mode = build_message(filtered)
 
     # 7. Send to Telegram
-    success = send_long_message(message)
+    success = send_long_message(message, parse_mode=parse_mode)
     if success:
-        # 8. Persist sent URLs so next run skips them
-        new_urls = [article.link for article in filtered]
-        save_sent_urls(seen_urls, new_urls)
+        # 8. Persist state so next run skips these articles
+        save_state(seen_urls, seen_titles, filtered)
         logger.info("Pipeline completed successfully. ✅")
     else:
         logger.error("Pipeline failed — message not delivered. ❌")
