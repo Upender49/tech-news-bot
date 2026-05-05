@@ -19,7 +19,9 @@ _raw_keywords = os.environ.get(
     "FILTER_KEYWORDS",
     "AI,ML,machine learning,deep learning,LLM,GPT,coding,DSA,data structure,"
     "algorithm,software,developer,hiring,placement,interview,internship,"
-    "programming,Python,Java,JavaScript,cloud,open source,GitHub,tech",
+    "programming,Python,Java,JavaScript,cloud,open source,GitHub,tech,"
+    "health,fitness,nutrition,productivity,lifehack,fact,general knowledge,"
+    "science,interesting,tips,til,lpt",
 )
 FILTER_KEYWORDS: list[str] = [kw.strip().lower() for kw in _raw_keywords.split(",") if kw.strip()]
 
@@ -44,6 +46,19 @@ RSS_FEEDS: list[dict] = [
     {
         "name": "Google News – Placements",
         "url": "https://news.google.com/rss/search?q=tech+hiring+placement+internship+software+engineer+2025&hl=en-IN&gl=IN&ceid=IN:en",
+    },
+    {
+        "name": "Google News – Health & Science",
+        "url": "https://news.google.com/rss/search?q=health+fitness+science+discoveries&hl=en-IN&gl=IN&ceid=IN:en",
+    },
+    # Reddit — general knowledge & tips
+    {
+        "name": "Reddit – Today I Learned",
+        "url": "https://www.reddit.com/r/todayilearned/top/.rss?t=day",
+    },
+    {
+        "name": "Reddit – Life Pro Tips",
+        "url": "https://www.reddit.com/r/LifeProTips/top/.rss?t=day",
     },
     # Hacker News top stories
     {

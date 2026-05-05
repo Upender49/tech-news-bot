@@ -26,6 +26,9 @@ _SOURCE_EMOJI: dict[str, str] = {
     "google news – coding":   "💻",
     "google news – dsa":      "🧮",
     "google news – placements": "🏢",
+    "google news – health & science": "🏥",
+    "reddit – today i learned": "🧠",
+    "reddit – life pro tips":   "💡",
 }
 
 
