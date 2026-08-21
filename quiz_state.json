@@ -1,4 +1,10 @@
 {
-  "sent_ids": [],
-  "topic_index": 0
+  "sent_ids": [
+    "ds_004",
+    "ds_001",
+    "ds_005",
+    "ds_003",
+    "ds_006"
+  ],
+  "topic_index": 1
 }
