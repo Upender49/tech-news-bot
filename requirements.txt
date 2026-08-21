@@ -1,1 +1,3 @@
-feedparser==6.0.11
+# No external dependencies needed for the quiz bot.
+# All modules used are Python stdlib (json, logging, random, datetime, pathlib, urllib).
+# feedparser was only needed for the old news pipeline and is no longer required.

@@ -1,17 +1,30 @@
 """
 main.py — Orchestrator / entry-point.
-Wires together: fetch → filter → format → send.
+NEW pipeline: generate quiz → format → send → save state.
+
+Preserved from old pipeline:
+  - config (Telegram token, chat ID, env vars)
+  - sender (Telegram API, retry logic, chunking)
+  - setup_logging
+  - validate_config
+  - sys.exit codes for GitHub Actions
+
+Replaced:
+  - fetcher / filter / formatter → quiz_generator
+  - state (URL/title tracking) → quiz_generator (ID-based tracking)
 """
 
 import logging
 import sys
 
 import config
-from fetcher import fetch_all_feeds
-from filter import filter_articles
-from formatter import build_message
+from quiz_generator import (
+    load_quiz_state,
+    pick_questions,
+    build_quiz_message,
+    save_quiz_state,
+)
 from sender import send_long_message
-from state import load_state, save_state
 
 
 def setup_logging() -> None:
@@ -24,42 +37,38 @@ def setup_logging() -> None:
 
 
 def run() -> None:
-    """Main pipeline: fetch → filter (dedup) → format → send → save state."""
+    """Main pipeline: load state → pick questions → format → send → save state."""
     logger = logging.getLogger("main")
-    logger.info("═══════════ Tech News Bot starting ═══════════")
+    logger.info("═══════════ CS Quiz Bot starting ═══════════")
 
-    # 1. Validate configuration
+    # 1. Validate Telegram configuration (unchanged)
     if not config.validate_config():
         logger.critical("Aborting — fix environment variables first.")
         sys.exit(1)
 
-    # 2. Load previously sent URLs and titles (cross-run deduplication)
-    seen_urls, seen_titles = load_state()
+    # 2. Load quiz state (sent question IDs + topic rotation index)
+    state = load_quiz_state()
 
-    # 3. Fetch articles from all RSS feeds
-    articles = fetch_all_feeds()
-    if not articles:
-        logger.warning("No articles fetched from any feed.")
+    # 3. Pick 5 questions with topic rotation & difficulty mix
+    questions, updated_state = pick_questions(state)
 
-    # 4. Filter & rank — skipping already-sent articles (URL or title match)
-    filtered = filter_articles(articles, seen_urls=seen_urls, seen_titles=seen_titles)
+    if not questions:
+        logger.error("No questions could be selected. Check question_bank.py.")
+        sys.exit(1)
 
-    # 5. If nothing new this cycle, exit gracefully
-    if not filtered:
-        logger.info("No new articles this cycle — all already sent or filtered out. Skipping.")
-        sys.exit(0)
+    # 4. Build formatted Telegram message (HTML mode)
+    message, parse_mode = build_quiz_message(questions)
 
-    # 6. Format into Telegram message (HTML mode)
-    message, parse_mode = build_message(filtered)
-
-    # 7. Send to Telegram
+    # 5. Send to Telegram (same sender, same config — unchanged)
     success = send_long_message(message, parse_mode=parse_mode)
+
     if success:
-        # 8. Persist state so next run skips these articles
-        save_state(seen_urls, seen_titles, filtered)
-        logger.info("Pipeline completed successfully. ✅")
+        # 6. Persist state so next run uses fresh questions
+        new_ids = [q["id"] for q in questions]
+        save_quiz_state(updated_state, new_ids)
+        logger.info("Quiz sent successfully. ✅ IDs: %s", new_ids)
     else:
-        logger.error("Pipeline failed — message not delivered. ❌")
+        logger.error("Failed to send quiz. ❌")
         sys.exit(1)
 
 
