@@ -19,7 +19,17 @@
     "sys_001",
     "algo_002",
     "prog_001",
-    "algo_004"
+    "algo_004",
+    "algo_006",
+    "db_005",
+    "web_001",
+    "ds_005",
+    "sys_002",
+    "os_002",
+    "oop_001",
+    "os_001",
+    "db_003",
+    "oop_002"
   ],
-  "topic_index": 10
+  "topic_index": 0
 }
