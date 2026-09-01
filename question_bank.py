@@ -1019,3 +1019,27 @@ QUESTIONS: list[dict] = [
         "tip": "",
     },
 ]
+
+# ── Merge Extra and Advanced Question Banks ──────────────────────────────────
+try:
+    from question_bank_extra import EXTRA_QUESTIONS
+    QUESTIONS.extend(EXTRA_QUESTIONS)
+except ImportError:
+    pass
+
+try:
+    from question_bank_advanced import ADVANCED_QUESTIONS
+    QUESTIONS.extend(ADVANCED_QUESTIONS)
+except ImportError:
+    pass
+
+# Ensure strictly unique question IDs
+_seen_ids = set()
+_unique_questions = []
+for _q in QUESTIONS:
+    if _q["id"] not in _seen_ids:
+        _seen_ids.add(_q["id"])
+        _unique_questions.append(_q)
+
+QUESTIONS = _unique_questions
+

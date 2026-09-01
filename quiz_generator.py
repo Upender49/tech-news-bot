@@ -46,18 +46,18 @@ TOPIC_ROTATION: list[str] = [
     "Web Fundamentals",
 ]
 
-# Difficulty mix for 10 questions
+# Difficulty mix for 10 questions (high standards: Medium, Interview, Tricky, Hard)
 DIFFICULTY_MIX: list[str] = [
-    "easy",
-    "easy",
-    "medium",
     "medium",
     "medium",
     "medium",
     "interview",
     "interview",
+    "interview",
     "tricky",
     "tricky",
+    "hard",
+    "hard",
 ]
 
 
@@ -83,9 +83,9 @@ def load_quiz_state() -> dict:
 
 
 def save_quiz_state(state: dict, new_ids: list[str]) -> None:
-    """Merge new_ids into state and persist."""
-    existing = state.get("sent_ids", [])
-    combined = [i for i in existing if i not in new_ids] + new_ids
+    """Merge new_ids into state maintaining order (FIFO) and persist."""
+    existing = [i for i in state.get("sent_ids", []) if i not in new_ids]
+    combined = existing + new_ids
     trimmed = combined[-MAX_STORED_IDS:]
     new_state = {"sent_ids": trimmed, "topic_index": state.get("topic_index", 0)}
     try:
@@ -101,19 +101,28 @@ def save_quiz_state(state: dict, new_ids: list[str]) -> None:
 def pick_questions(state: dict) -> tuple[list[dict], dict]:
     """
     Select QUESTIONS_PER_QUIZ questions using topic rotation and difficulty mix.
+    Uses strict FIFO deduplication: questions will not repeat until the entire bank is exhausted.
     Returns (selected_questions, updated_state).
     """
-    sent_ids: set[str] = set(state.get("sent_ids", []))
+    sent_ids_list: list[str] = list(state.get("sent_ids", []))
+    sent_ids_set: set[str] = set(sent_ids_list)
     topic_index: int = state.get("topic_index", 0)
 
-    unseen = [q for q in QUESTIONS if q["id"] not in sent_ids]
+    unseen = [q for q in QUESTIONS if q["id"] not in sent_ids_set]
 
-    # Reset if fewer than needed
+    # If unseen questions are fewer than needed, evict oldest sent IDs (FIFO)
+    while len(unseen) < QUESTIONS_PER_QUIZ and sent_ids_list:
+        evicted = sent_ids_list.pop(0)
+        sent_ids_set.discard(evicted)
+        unseen = [q for q in QUESTIONS if q["id"] not in sent_ids_set]
+
+    # If still not enough (e.g. total bank < 10), use all questions
     if len(unseen) < QUESTIONS_PER_QUIZ:
-        logger.info("Resetting sent history (only %d unseen).", len(unseen))
-        sent_ids = set()
         unseen = list(QUESTIONS)
-        state["sent_ids"] = []
+        sent_ids_list = []
+        sent_ids_set = set()
+
+    state["sent_ids"] = sent_ids_list
 
     primary_topic = TOPIC_ROTATION[topic_index % len(TOPIC_ROTATION)]
     state["topic_index"] = (topic_index + 1) % len(TOPIC_ROTATION)
@@ -124,7 +133,7 @@ def pick_questions(state: dict) -> tuple[list[dict], dict]:
     for difficulty in DIFFICULTY_MIX:
         selected_ids = {s["id"] for s in selected}
 
-        # Try primary topic + difficulty
+        # 1. Try primary topic + matching difficulty
         candidates = [
             q for q in unseen
             if q["topic"] == primary_topic
@@ -132,23 +141,45 @@ def pick_questions(state: dict) -> tuple[list[dict], dict]:
             and q["id"] not in selected_ids
         ]
         if candidates:
-            selected.append(random.choice(candidates))
+            chosen = random.choice(candidates)
+            selected.append(chosen)
             continue
 
-        # Any topic + difficulty
+        # 2. Any topic + matching difficulty
         candidates = [
             q for q in unseen
             if q["difficulty"] == difficulty
             and q["id"] not in selected_ids
         ]
         if candidates:
-            selected.append(random.choice(candidates))
+            chosen = random.choice(candidates)
+            selected.append(chosen)
             continue
 
-        # Any unseen question as fallback
+        # 3. Primary topic + any difficulty
+        candidates = [
+            q for q in unseen
+            if q["topic"] == primary_topic
+            and q["id"] not in selected_ids
+        ]
+        if candidates:
+            chosen = random.choice(candidates)
+            selected.append(chosen)
+            continue
+
+        # 4. Any unseen question
         candidates = [q for q in unseen if q["id"] not in selected_ids]
         if candidates:
-            selected.append(random.choice(candidates))
+            chosen = random.choice(candidates)
+            selected.append(chosen)
+
+    # If still under 10 (fallback safeguard from full bank without duplicates)
+    while len(selected) < QUESTIONS_PER_QUIZ:
+        selected_ids = {s["id"] for s in selected}
+        remaining = [q for q in QUESTIONS if q["id"] not in selected_ids]
+        if not remaining:
+            break
+        selected.append(random.choice(remaining))
 
     topics_used = [q["topic"] for q in selected]
     logger.info("Selected %d questions. Topics: %s", len(selected), ", ".join(topics_used))
@@ -201,91 +232,123 @@ def _difficulty_stars(difficulty: str) -> str:
 
 # ── Message builders ─────────────────────────────────────────────────────────
 
-def build_questions_message(questions: list[dict]) -> str:
-    """
-    Part 1: Questions only.
-    Compact format — no explanations, so always fits in one Telegram message.
-    """
-    now_utc = datetime.now(timezone.utc).strftime("%d %b %Y · %I:%M %p UTC")
-    topics = sorted(set(q["topic"] for q in questions))
+SAFE_MSG_LIMIT = 3500
 
+
+def _format_single_question(i: int, q: dict) -> str:
+    """Format one question item."""
+    q_html = _text_to_html(q["q"])
+    diff_tag = f"<i>[{_esc(q.get('topic', 'CS'))} · {_esc(q.get('difficulty', 'medium')).capitalize()}]</i>"
     lines = [
-        "🧠 <b>CS FUNDAMENTALS QUIZ</b>",
-        f"📅 <i>{now_utc}</i>",
-        f"📚 Topics: <i>{_esc(', '.join(topics))}</i>",
-        f"❓ {len(questions)} questions • Try to answer before scrolling!",
-        "━━━━━━━━━━━━━━━━━━━━━━━━",
+        f"<b>Q{i}.</b> {diff_tag}\n{q_html}",
         "",
     ]
-
-    for i, q in enumerate(questions, start=1):
-        # Question text (handles code blocks)
-        q_html = _text_to_html(q["q"])
-        lines.append(f"<b>Q{i}.</b> {q_html}")
-        lines.append("")
-        for key in ("A", "B", "C", "D"):
-            val = q["options"].get(key, "")
-            lines.append(f"  {key}) {_esc(val)}")
-        lines.append("─ ─ ─ ─ ─ ─ ─ ─ ─ ─")
-        lines.append("")
-
-    lines.append("✏️ <b>Answer key in the next message ↓</b>")
-
+    for key in ("A", "B", "C", "D"):
+        val = q["options"].get(key, "")
+        lines.append(f"  <b>{key})</b> {_esc(val)}")
+    lines.append("─ ─ ─ ─ ─ ─ ─ ─ ─ ─")
     return "\n".join(lines)
 
 
-def _build_answers_block(questions: list[dict], start_num: int, label: str) -> str:
-    """Build an answers block for a subset of questions."""
+def _format_single_answer(i: int, q: dict) -> str:
+    """Format one answer + explanation item."""
+    answer_key = q["answer"]
+    answer_val = q["options"].get(answer_key, "")
+    stars = _difficulty_stars(q["difficulty"])
     lines = [
-        f"📝 <b>ANSWERS &amp; EXPLANATIONS {label}</b>",
-        "━━━━━━━━━━━━━━━━━━━━━━━━",
-        "",
+        f"<b>{i}. {_esc(answer_val)}</b> ✅ ({answer_key})",
+        f"📊 {stars}",
+        f"💬 {_text_to_html(q['explanation'])}",
     ]
-    for i, q in enumerate(questions, start=start_num):
-        answer_key = q["answer"]
-        answer_val = q["options"].get(answer_key, "")
-        stars = _difficulty_stars(q["difficulty"])
-        lines.append(f"<b>{i}. {_esc(answer_val)}</b> ✅ ({answer_key})")
-        lines.append(f"📊 {stars}")
-        lines.append(f"💬 {_text_to_html(q['explanation'])}")
-        if q.get("tip"):
-            lines.append(f"💡 <b>Interview Tip:</b> {_esc(q['tip'])}")
-        lines.append("")
+    if q.get("tip"):
+        lines.append(f"💡 <b>Interview Tip:</b> {_esc(q['tip'])}")
+    lines.append("")
     return "\n".join(lines)
 
 
 def build_quiz_messages(questions: list[dict]) -> tuple[list[str], str]:
     """
-    Build all quiz messages and return (list_of_messages, parse_mode).
-
-    For 10 questions, returns 3 messages:
-      [0] Questions 1-10 (compact, always fits)
-      [1] Answers 1-5   (fits under 4096)
-      [2] Answers 6-10 + footer (fits under 4096)
+    Build all quiz messages adaptively packed to guarantee every message stays <= SAFE_MSG_LIMIT (3500 chars).
+    Returns (list_of_messages, parse_mode).
     """
     if not questions:
         fallback = "🧠 <b>CS FUNDAMENTALS</b>\n\nNo questions available. Check back soon!"
         return [fallback], "HTML"
 
-    mid = len(questions) // 2
-    first_half  = questions[:mid]
-    second_half = questions[mid:]
+    now_utc = datetime.now(timezone.utc).strftime("%d %b %Y · %I:%M %p UTC")
+    topics = sorted(set(q["topic"] for q in questions))
 
-    q_msg  = build_questions_message(questions)
-    a1_msg = _build_answers_block(first_half,  start_num=1,       label=f"(Q1–{mid})")
-    a2_body= _build_answers_block(second_half, start_num=mid + 1, label=f"(Q{mid+1}–{len(questions)})")
+    messages: list[str] = []
 
-    # Append footer to the last answers message
-    footer = (
-        "━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        "💪 <b>Keep learning. Keep growing!</b>\n"
-        "#CSFundamentals #PlacementPrep #TechInterview #CSE"
+    # ── 1. Pack Questions ─────────────────────────────────────────────────────
+    q_blocks = [_format_single_question(i, q) for i, q in enumerate(questions, start=1)]
+
+    current_q_chunks: list[str] = []
+    q_part = 1
+    current_text = ""
+
+    header_first = (
+        "🧠 <b>CS FUNDAMENTALS QUIZ</b>\n"
+        f"📅 <i>{now_utc}</i>\n"
+        f"📚 Topics: <i>{_esc(', '.join(topics))}</i>\n"
+        "❓ Try answering each before reading explanations!\n"
+        "━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
     )
-    a2_msg = a2_body + "\n" + footer
 
-    messages = [q_msg, a1_msg, a2_msg]
+    current_text = header_first
+    for idx, block in enumerate(q_blocks, start=1):
+        test_text = current_text + block + "\n\n"
+        if len(test_text) > SAFE_MSG_LIMIT and current_text != header_first:
+            # Finalize previous question chunk
+            current_text += "✏️ <i>Questions continue in next message ↓</i>"
+            messages.append(current_text.strip())
+            q_part += 1
+            current_text = (
+                f"🧠 <b>CS FUNDAMENTALS QUIZ — PART {q_part}</b>\n"
+                "━━━━━━━━━━━━━━━━━━━━━━━━\n\n" + block + "\n\n"
+            )
+        else:
+            current_text = test_text
+
+    if current_text:
+        current_text += "✏️ <b>Answer keys & detailed explanations in next message ↓</b>"
+        messages.append(current_text.strip())
+
+    # ── 2. Pack Answers ───────────────────────────────────────────────────────
+    a_blocks = [_format_single_answer(i, q) for i, q in enumerate(questions, start=1)]
+
+    a_part = 1
+    header_ans = (
+        "📝 <b>ANSWERS &amp; EXPLANATIONS</b>\n"
+        "━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    )
+    current_ans_text = header_ans
+
+    footer = (
+        "\n━━━━━━━━━━━━━━━━━━━━━━━━\n"
+        "💪 <b>Master the Fundamentals. Ace the Interviews!</b>\n"
+        "#CSFundamentals #PlacementPrep #TechInterview #DSA #SystemDesign"
+    )
+
+    for idx, block in enumerate(a_blocks, start=1):
+        test_text = current_ans_text + block + "\n"
+        if len(test_text) > (SAFE_MSG_LIMIT - 300) and current_ans_text != header_ans:
+            # Finalize previous answer chunk
+            messages.append(current_ans_text.strip())
+            a_part += 1
+            current_ans_text = (
+                f"📝 <b>ANSWERS &amp; EXPLANATIONS — PART {a_part}</b>\n"
+                "━━━━━━━━━━━━━━━━━━━━━━━━\n\n" + block + "\n"
+            )
+        else:
+            current_ans_text = test_text
+
+    if current_ans_text:
+        current_ans_text += footer
+        messages.append(current_ans_text.strip())
+
     logger.info(
-        "Messages built: Q=%d, A1=%d, A2=%d chars (limit 4096).",
-        len(q_msg), len(a1_msg), len(a2_msg),
+        "Messages adaptively built: %d parts (all <= %d chars). Sizes: %s",
+        len(messages), SAFE_MSG_LIMIT, [len(m) for m in messages],
     )
     return messages, "HTML"

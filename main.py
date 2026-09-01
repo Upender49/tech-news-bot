@@ -55,24 +55,23 @@ def run() -> None:
     messages, parse_mode = build_quiz_messages(questions)
 
     # 5. Send all messages sequentially
-    labels = ["Questions", "Answers Part 1", "Answers Part 2"]
-    for i, (msg, label) in enumerate(zip(messages, labels), start=1):
+    for i, msg in enumerate(messages, start=1):
         logger.info(
-            "Sending message %d/%d (%s, %d chars)...",
-            i, len(messages), label, len(msg),
+            "Sending message %d/%d (%d chars)...",
+            i, len(messages), len(msg),
         )
         if len(msg) > 4096:
             logger.error(
-                "Message %d (%s) is %d chars — exceeds 4096! Aborting.",
-                i, label, len(msg),
+                "Message %d is %d chars — exceeds 4096! Aborting.",
+                i, len(msg),
             )
             sys.exit(1)
 
         ok = send_message(msg, parse_mode=parse_mode)
         if not ok:
-            logger.error("Failed to send message %d (%s). ❌", i, label)
+            logger.error("Failed to send message %d/%d. ❌", i, len(messages))
             sys.exit(1)
-        logger.info("Message %d (%s) sent. ✅", i, label)
+        logger.info("Message %d/%d sent. ✅", i, len(messages))
 
     # 6. Save state (only after all messages succeed)
     new_ids = [q["id"] for q in questions]
