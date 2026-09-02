@@ -49,7 +49,17 @@
     "oop_002",
     "oop_011",
     "sys_adv_001",
-    "dsa_adv_001"
+    "dsa_adv_001",
+    "prog_006",
+    "prog_002",
+    "prog_008",
+    "prog_007",
+    "prog_004",
+    "sys_007",
+    "prog_005",
+    "prog_003",
+    "concur_adv_002",
+    "concur_adv_001"
   ],
-  "topic_index": 6
+  "topic_index": 7
 }
