@@ -79,7 +79,17 @@
     "ds_002",
     "ds_019",
     "se_003",
-    "se_005"
+    "se_005",
+    "arch_004",
+    "arch_001",
+    "arch_003",
+    "arch_002",
+    "web_003",
+    "dsa_adv_005",
+    "algo_012",
+    "ds_006",
+    "arch_005",
+    "web_004"
   ],
-  "topic_index": 9
+  "topic_index": 10
 }
