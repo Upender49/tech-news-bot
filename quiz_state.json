@@ -119,7 +119,17 @@
     "algo_007",
     "algo_017",
     "algo_011",
-    "oop_007"
+    "oop_007",
+    "os_002",
+    "os_010",
+    "ds_001",
+    "os_006",
+    "os_009",
+    "net_006",
+    "net_adv_003",
+    "oop_004",
+    "db_001",
+    "se_002"
   ],
-  "topic_index": 2
+  "topic_index": 3
 }
