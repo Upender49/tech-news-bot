@@ -1,15 +1,5 @@
 {
   "sent_ids": [
-    "oop_012",
-    "oop_003",
-    "oop_001",
-    "oop_006",
-    "oop_008",
-    "oop_002",
-    "oop_011",
-    "sys_adv_001",
-    "dsa_adv_001",
-    "prog_006",
     "prog_002",
     "prog_008",
     "prog_007",
@@ -138,7 +128,17 @@
     "net_009",
     "net_004",
     "dsa_adv_002",
-    "net_adv_001"
+    "net_adv_001",
+    "oop_012",
+    "oop_003",
+    "prog_006",
+    "oop_001",
+    "oop_008",
+    "oop_006",
+    "oop_002",
+    "oop_011",
+    "sys_adv_001",
+    "dsa_adv_001"
   ],
-  "topic_index": 8
+  "topic_index": 9
 }
