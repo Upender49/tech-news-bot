@@ -1,15 +1,5 @@
 {
   "sent_ids": [
-    "sys_006",
-    "prog_008",
-    "sys_007",
-    "prog_004",
-    "prog_007",
-    "prog_003",
-    "prog_005",
-    "concur_adv_001",
-    "concur_adv_002",
-    "se_001",
     "sys_002",
     "oop_010",
     "sys_001",
@@ -138,7 +128,17 @@
     "oop_011",
     "oop_002",
     "dsa_adv_001",
-    "sys_adv_001"
+    "sys_adv_001",
+    "sys_006",
+    "prog_008",
+    "se_001",
+    "prog_007",
+    "sys_007",
+    "prog_004",
+    "prog_005",
+    "prog_003",
+    "concur_adv_002",
+    "concur_adv_001"
   ],
-  "topic_index": 1
+  "topic_index": 2
 }
