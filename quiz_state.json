@@ -1,15 +1,5 @@
 {
   "sent_ids": [
-    "oop_007",
-    "algo_010",
-    "algo_013",
-    "algo_008",
-    "algo_014",
-    "algo_011",
-    "os_002",
-    "algo_007",
-    "algo_016",
-    "ds_001",
     "db_001",
     "net_005",
     "net_006",
@@ -138,7 +128,17 @@
     "prog_001",
     "ds_016",
     "ds_010",
-    "ds_007"
+    "ds_007",
+    "os_002",
+    "algo_007",
+    "algo_011",
+    "algo_013",
+    "algo_008",
+    "algo_014",
+    "algo_016",
+    "ds_001",
+    "oop_007",
+    "algo_010"
   ],
-  "topic_index": 7
+  "topic_index": 8
 }
