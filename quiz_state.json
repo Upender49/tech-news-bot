@@ -1,15 +1,5 @@
 {
   "sent_ids": [
-    "net_002",
-    "db_004",
-    "db_adv_004",
-    "db_009",
-    "db_adv_003",
-    "db_010",
-    "db_006",
-    "db_adv_001",
-    "sys_adv_002",
-    "oop_012",
     "net_007",
     "oop_005",
     "net_011",
@@ -138,7 +128,17 @@
     "os_adv_004",
     "os_003",
     "db_adv_002",
-    "os_adv_001"
+    "os_adv_001",
+    "oop_012",
+    "db_004",
+    "net_002",
+    "db_adv_003",
+    "db_009",
+    "db_adv_004",
+    "db_006",
+    "db_010",
+    "sys_adv_002",
+    "db_adv_001"
   ],
-  "topic_index": 1
+  "topic_index": 2
 }
