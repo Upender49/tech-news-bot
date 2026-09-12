@@ -1,15 +1,5 @@
 {
   "sent_ids": [
-    "ds_018",
-    "web_008",
-    "ds_003",
-    "web_007",
-    "sec_adv_001",
-    "algo_015",
-    "dsa_adv_003",
-    "web_005",
-    "web_002",
-    "algo_017",
     "algo_009",
     "ds_011",
     "ds_008",
@@ -138,7 +128,17 @@
     "algo_012",
     "ds_006",
     "ds_015",
-    "arch_003"
+    "arch_003",
+    "ds_018",
+    "web_005",
+    "algo_017",
+    "web_007",
+    "ds_003",
+    "sec_adv_001",
+    "algo_015",
+    "dsa_adv_003",
+    "web_002",
+    "web_008"
   ],
-  "topic_index": 8
+  "topic_index": 9
 }
