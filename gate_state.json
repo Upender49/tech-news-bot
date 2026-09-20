@@ -1,5 +1,5 @@
 {
-  "session_count": 20,
+  "session_count": 21,
   "current_day": 3,
   "current_phase": 1,
   "sent_ids": [
@@ -22,7 +22,17 @@
     "os_sched_001",
     "db_btree_001",
     "ds_tree_001",
-    "ga_quant_001"
+    "ga_quant_001",
+    "coa_hazard_001",
+    "coa_pipe_001",
+    "coa_cache_001",
+    "ga_quant_003",
+    "pyq_gate2022_os_01",
+    "os_mem_002",
+    "ga_verbal_002",
+    "dm_comb_001",
+    "dm_graph_001",
+    "db_serial_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Machine Instructions & Addressing",
@@ -44,15 +54,17 @@
     "Discrete Mathematics — Combinatorics",
     "Databases (DBMS) — Normalization & Functional Dependencies",
     "Operating Systems — CPU Scheduling",
-    "Theory of Computation — Turing Machines & Undecidability"
+    "Theory of Computation — Turing Machines & Undecidability",
+    "Computer Organization & Architecture — Instruction Pipelining"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
       "Machine Instructions & Addressing",
-      "I/O Interface"
+      "I/O Interface",
+      "Instruction Pipelining"
     ],
     "Programming & Data Structures": [
       "Non-Linear Data Structures",
