@@ -1,90 +1,27 @@
-"""
-config.py — Central configuration loader.
-Reads environment variables (set locally or via GitHub Secrets).
-"""
+"""config.py — Central configuration loader for GATE CSE Personal Teacher Bot."""
 
-import os
 import logging
+import os
 
-# ── Telegram ──────────────────────────────────────────────────────────────────
+# ── Telegram Credentials ──────────────────────────────────────────────────────
 TELEGRAM_BOT_TOKEN: str = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-TELEGRAM_CHAT_ID: str   = os.environ.get("TELEGRAM_CHAT_ID", "")
+TELEGRAM_CHAT_ID: str = os.environ.get("TELEGRAM_CHAT_ID", "")
 
-# ── Fetch settings ────────────────────────────────────────────────────────────
-MAX_ARTICLES_PER_FEED: int = int(os.environ.get("MAX_ARTICLES_PER_FEED", "5"))
-MAX_TOTAL_ARTICLES: int    = int(os.environ.get("MAX_TOTAL_ARTICLES", "12"))
-
-# ── Keyword filter (comma-separated in env, or use defaults) ──────────────────
-_raw_keywords = os.environ.get(
-    "FILTER_KEYWORDS",
-    "AI,ML,machine learning,deep learning,LLM,GPT,coding,DSA,data structure,"
-    "algorithm,software,developer,hiring,placement,interview,internship,"
-    "programming,Python,Java,JavaScript,cloud,open source,GitHub,tech,"
-    "health,fitness,nutrition,productivity,lifehack,fact,general knowledge,"
-    "science,interesting,tips,til,lpt",
-)
-FILTER_KEYWORDS: list[str] = [kw.strip().lower() for kw in _raw_keywords.split(",") if kw.strip()]
+# ── GATE Engine Configuration ─────────────────────────────────────────────────
+QUESTIONS_PER_SESSION: int = int(os.environ.get("QUESTIONS_PER_SESSION", "10"))
+QUIZ_INTERVAL_HOURS: int = int(os.environ.get("QUIZ_INTERVAL_HOURS", "3"))
+STUDY_PLAN_DAYS: int = int(os.environ.get("STUDY_PLAN_DAYS", "90"))
+GATE_BRANCH: str = os.environ.get("GATE_BRANCH", "CS")
+PYQ_ENABLED: bool = os.environ.get("PYQ_ENABLED", "true").lower() == "true"
+GA_ENABLED: bool = os.environ.get("GA_ENABLED", "true").lower() == "true"
+SPACED_REPETITION: bool = os.environ.get("SPACED_REPETITION", "true").lower() == "true"
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 LOG_LEVEL: str = os.environ.get("LOG_LEVEL", "INFO").upper()
 
-# ── RSS feed list ─────────────────────────────────────────────────────────────
-RSS_FEEDS: list[dict] = [
-    # Google News — topic-based
-    {
-        "name": "Google News – AI",
-        "url": "https://news.google.com/rss/search?q=artificial+intelligence+machine+learning&hl=en-IN&gl=IN&ceid=IN:en",
-    },
-    {
-        "name": "Google News – Coding",
-        "url": "https://news.google.com/rss/search?q=programming+software+developer&hl=en-IN&gl=IN&ceid=IN:en",
-    },
-    {
-        "name": "Google News – DSA",
-        "url": "https://news.google.com/rss/search?q=data+structures+algorithms+competitive+programming&hl=en-IN&gl=IN&ceid=IN:en",
-    },
-    {
-        "name": "Google News – Placements",
-        "url": "https://news.google.com/rss/search?q=tech+hiring+placement+internship+software+engineer+2025&hl=en-IN&gl=IN&ceid=IN:en",
-    },
-    {
-        "name": "Google News – Health & Science",
-        "url": "https://news.google.com/rss/search?q=health+fitness+science+discoveries&hl=en-IN&gl=IN&ceid=IN:en",
-    },
-    # Reddit — general knowledge & tips
-    {
-        "name": "Reddit – Today I Learned",
-        "url": "https://www.reddit.com/r/todayilearned/top/.rss?t=day",
-    },
-    {
-        "name": "Reddit – Life Pro Tips",
-        "url": "https://www.reddit.com/r/LifeProTips/top/.rss?t=day",
-    },
-    # Hacker News top stories
-    {
-        "name": "Hacker News",
-        "url": "https://hnrss.org/frontpage",
-    },
-    # Dev.to
-    {
-        "name": "Dev.to",
-        "url": "https://dev.to/feed",
-    },
-    # TechCrunch
-    {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/feed/",
-    },
-    # The Verge – Tech
-    {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/rss/index.xml",
-    },
-]
-
 
 def validate_config() -> bool:
-    """Return True only if all mandatory config values are present."""
+    """Return True only if all mandatory Telegram credentials are present."""
     missing = []
     if not TELEGRAM_BOT_TOKEN:
         missing.append("TELEGRAM_BOT_TOKEN")

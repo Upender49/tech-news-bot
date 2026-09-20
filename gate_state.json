@@ -1,0 +1,111 @@
+{
+  "session_count": 15,
+  "current_day": 2,
+  "current_phase": 1,
+  "sent_ids": [
+    "coa_cache_001",
+    "toc_undec_001",
+    "os_disk_001",
+    "os_mem_002",
+    "os_synch_001",
+    "os_proc_001",
+    "pyq_gate2022_os_01",
+    "ga_spatial_001",
+    "ga_spatial_002",
+    "pyq_gate2021_dsa_01",
+    "cn_csmacd_001",
+    "ga_quant_002",
+    "algo_rec_001",
+    "algo_mst_001",
+    "algo_dp_001",
+    "ga_quant_001",
+    "ga_quant_003",
+    "dm_comb_001",
+    "ga_analytical_002",
+    "cd_lr_001",
+    "em_la_001",
+    "coa_hazard_001",
+    "dl_kmap_001",
+    "dl_float_001",
+    "ga_verbal_002",
+    "ga_verbal_001",
+    "db_norm_001",
+    "em_prob_001",
+    "os_deadlock_001",
+    "db_btree_001",
+    "os_mem_001",
+    "cd_parse_001",
+    "cn_tcp_001",
+    "cn_subnet_001",
+    "ga_analytical_001",
+    "ds_tree_001",
+    "ds_c_ptr_001",
+    "coa_pipe_001",
+    "dm_logic_001",
+    "toc_dfa_001",
+    "ds_stack_001",
+    "ds_bst_001"
+  ],
+  "session_themes": [
+    "Computer Organization & Architecture — Machine Instructions & Addressing",
+    "Programming & Data Structures — Non-Linear Data Structures",
+    "Discrete Mathematics — Mathematical Logic",
+    "Computer Networks — Network Layer & IP Addressing",
+    "Theory of Computation — Regular Languages & Finite Automata",
+    "Operating Systems — Concurrency & Synchronization",
+    "Algorithms — Dynamic Programming",
+    "Computer Organization & Architecture — I/O Interface",
+    "Databases (DBMS) — File Organization & Indexing",
+    "Engineering Mathematics — Linear Algebra",
+    "Compiler Design — Intermediate Code & Optimization",
+    "Operating Systems — File Systems & Disk Scheduling",
+    "Algorithms — Asymptotic Analysis & Recurrences",
+    "Digital Logic — Combinational Circuits",
+    "Computer Networks — Transport Layer"
+  ],
+  "topic_history": {},
+  "ga_rotation_index": 3,
+  "concept_tracker": {},
+  "syllabus_progress": {
+    "Computer Organization & Architecture": [
+      "Machine Instructions & Addressing",
+      "I/O Interface"
+    ],
+    "Programming & Data Structures": [
+      "Non-Linear Data Structures"
+    ],
+    "Discrete Mathematics": [
+      "Mathematical Logic"
+    ],
+    "Computer Networks": [
+      "Network Layer & IP Addressing",
+      "Transport Layer"
+    ],
+    "Theory of Computation": [
+      "Regular Languages & Finite Automata"
+    ],
+    "Operating Systems": [
+      "Concurrency & Synchronization",
+      "File Systems & Disk Scheduling"
+    ],
+    "Algorithms": [
+      "Dynamic Programming",
+      "Asymptotic Analysis & Recurrences"
+    ],
+    "Databases (DBMS)": [
+      "File Organization & Indexing"
+    ],
+    "Engineering Mathematics": [
+      "Linear Algebra"
+    ],
+    "Compiler Design": [
+      "Intermediate Code & Optimization"
+    ],
+    "Digital Logic": [
+      "Combinational Circuits"
+    ]
+  },
+  "weak_topics": [],
+  "subject_stats": {},
+  "phase_name": "Phase 1: Foundation & Core Principles"
+}
