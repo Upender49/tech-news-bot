@@ -1,5 +1,5 @@
 {
-  "session_count": 17,
+  "session_count": 18,
   "current_day": 3,
   "current_phase": 1,
   "sent_ids": [
@@ -28,7 +28,17 @@
     "cd_parse_001",
     "ga_analytical_002",
     "algo_dp_001",
-    "db_norm_001"
+    "db_norm_001",
+    "db_btree_001",
+    "db_serial_001",
+    "ga_verbal_001",
+    "os_disk_001",
+    "algo_mst_001",
+    "cn_csmacd_001",
+    "em_la_001",
+    "os_mem_002",
+    "algo_rec_001",
+    "os_proc_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Machine Instructions & Addressing",
@@ -47,10 +57,11 @@
     "Digital Logic — Combinational Circuits",
     "Computer Networks — Transport Layer",
     "Programming & Data Structures — Programming in C",
-    "Discrete Mathematics — Combinatorics"
+    "Discrete Mathematics — Combinatorics",
+    "Databases (DBMS) — Normalization & Functional Dependencies"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -81,7 +92,8 @@
       "Asymptotic Analysis & Recurrences"
     ],
     "Databases (DBMS)": [
-      "File Organization & Indexing"
+      "File Organization & Indexing",
+      "Normalization & Functional Dependencies"
     ],
     "Engineering Mathematics": [
       "Linear Algebra"
