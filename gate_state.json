@@ -1,44 +1,8 @@
 {
-  "session_count": 19,
+  "session_count": 20,
   "current_day": 3,
   "current_phase": 1,
   "sent_ids": [
-    "ds_c_ptr_001",
-    "coa_pipe_001",
-    "dm_logic_001",
-    "toc_dfa_001",
-    "ds_stack_001",
-    "ds_bst_001",
-    "pyq_gate2021_dsa_01",
-    "ds_tree_001",
-    "ga_spatial_002",
-    "ga_spatial_001",
-    "pyq_gate2022_os_01",
-    "coa_cache_001",
-    "ga_verbal_002",
-    "em_prob_001",
-    "toc_undec_001",
-    "ga_analytical_001",
-    "dm_comb_001",
-    "dm_graph_001",
-    "ga_quant_001",
-    "ga_quant_003",
-    "coa_hazard_001",
-    "os_sched_001",
-    "cd_parse_001",
-    "ga_analytical_002",
-    "algo_dp_001",
-    "db_norm_001",
-    "db_btree_001",
-    "db_serial_001",
-    "ga_verbal_001",
-    "os_disk_001",
-    "algo_mst_001",
-    "cn_csmacd_001",
-    "em_la_001",
-    "os_mem_002",
-    "algo_rec_001",
-    "os_proc_001",
     "os_deadlock_001",
     "os_synch_001",
     "os_mem_001",
@@ -48,7 +12,17 @@
     "cd_lr_001",
     "dl_kmap_001",
     "toc_cfl_001",
-    "cn_subnet_001"
+    "cn_subnet_001",
+    "toc_undec_001",
+    "toc_dfa_001",
+    "ga_spatial_002",
+    "ga_spatial_001",
+    "pyq_gate2021_dsa_01",
+    "algo_rec_001",
+    "os_sched_001",
+    "db_btree_001",
+    "ds_tree_001",
+    "ga_quant_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Machine Instructions & Addressing",
@@ -69,10 +43,11 @@
     "Programming & Data Structures — Programming in C",
     "Discrete Mathematics — Combinatorics",
     "Databases (DBMS) — Normalization & Functional Dependencies",
-    "Operating Systems — CPU Scheduling"
+    "Operating Systems — CPU Scheduling",
+    "Theory of Computation — Turing Machines & Undecidability"
   ],
   "topic_history": {},
-  "ga_rotation_index": 3,
+  "ga_rotation_index": 4,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -92,7 +67,8 @@
       "Transport Layer"
     ],
     "Theory of Computation": [
-      "Regular Languages & Finite Automata"
+      "Regular Languages & Finite Automata",
+      "Turing Machines & Undecidability"
     ],
     "Operating Systems": [
       "Concurrency & Synchronization",
