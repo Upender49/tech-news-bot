@@ -1,5 +1,5 @@
 {
-  "session_count": 16,
+  "session_count": 17,
   "current_day": 3,
   "current_phase": 1,
   "sent_ids": [
@@ -18,7 +18,17 @@
     "ga_verbal_002",
     "em_prob_001",
     "toc_undec_001",
-    "ga_analytical_001"
+    "ga_analytical_001",
+    "dm_comb_001",
+    "dm_graph_001",
+    "ga_quant_001",
+    "ga_quant_003",
+    "coa_hazard_001",
+    "os_sched_001",
+    "cd_parse_001",
+    "ga_analytical_002",
+    "algo_dp_001",
+    "db_norm_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Machine Instructions & Addressing",
@@ -36,10 +46,11 @@
     "Algorithms — Asymptotic Analysis & Recurrences",
     "Digital Logic — Combinational Circuits",
     "Computer Networks — Transport Layer",
-    "Programming & Data Structures — Programming in C"
+    "Programming & Data Structures — Programming in C",
+    "Discrete Mathematics — Combinatorics"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -51,7 +62,8 @@
       "Programming in C"
     ],
     "Discrete Mathematics": [
-      "Mathematical Logic"
+      "Mathematical Logic",
+      "Combinatorics"
     ],
     "Computer Networks": [
       "Network Layer & IP Addressing",
