@@ -1,5 +1,5 @@
 {
-  "session_count": 24,
+  "session_count": 25,
   "current_day": 4,
   "current_phase": 1,
   "sent_ids": [
@@ -26,7 +26,17 @@
     "ds_bst_001",
     "cd_lr_001",
     "db_serial_001",
-    "db_btree_001"
+    "db_btree_001",
+    "os_deadlock_001",
+    "os_proc_001",
+    "os_synch_001",
+    "os_mem_002",
+    "os_sched_001",
+    "ga_quant_003",
+    "ga_quant_001",
+    "os_mem_001",
+    "db_norm_001",
+    "ga_verbal_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Machine Instructions & Addressing",
@@ -52,10 +62,11 @@
     "Computer Organization & Architecture — Instruction Pipelining",
     "Compiler Design — Syntax-Directed Translation (SDT)",
     "Computer Networks — Application Layer & Security",
-    "Algorithms — Searching, Sorting & Hashing"
+    "Algorithms — Searching, Sorting & Hashing",
+    "Operating Systems — Deadlocks"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -83,7 +94,8 @@
     "Operating Systems": [
       "Concurrency & Synchronization",
       "File Systems & Disk Scheduling",
-      "CPU Scheduling"
+      "CPU Scheduling",
+      "Deadlocks"
     ],
     "Algorithms": [
       "Dynamic Programming",
