@@ -54,11 +54,16 @@ def test_question_bank_integrity():
     print("\n[PASS] Test 1: All questions conform strictly to GATE schema.")
 
 
-def test_single_session_generation():
-    print("\n=== TEST 2: Single Session Generation & Message Sizing ===")
+def test_single_session_inline_format():
+    print("\n=== TEST 2: Single Session Generation & Inline QA Format ===")
     state = load_gate_state()
-    questions, theme = pick_gate_session_questions(state)
+    assert state.get("current_day") == 1, f"Expected Day 1 on fresh reset, got Day {state.get('current_day')}"
+    assert state.get("current_phase") == 1, f"Expected Phase 1, got Phase {state.get('current_phase')}"
 
+    # Verify question history is preserved
+    assert len(state.get("sent_ids", [])) > 0, "sent_ids history should be preserved!"
+
+    questions, theme = pick_gate_session_questions(state)
     assert len(questions) == 10, f"Expected exactly 10 questions, got {len(questions)}"
     print(f"Session Theme: {theme}")
     print(f"Selected {len(questions)} questions:")
@@ -67,16 +72,33 @@ def test_single_session_generation():
 
     messages, _ = build_gate_quiz_messages(questions, theme, state)
     print(f"\nGenerated {len(messages)} Telegram message parts:")
+
+    all_content = "\n".join(messages)
+
+    # 1. Verify Day 1 header
+    assert "GATE CSE — DAY 1" in messages[0], "Day 1 header missing in first message!"
+
+    # 2. Verify all 10 questions have inline answers (Answer follows each question)
+    assert all_content.count("✅ Answer:") == 10, f"Expected 10 inline '✅ Answer:' occurrences, found {all_content.count('✅ Answer:')}"
+    assert all_content.count("📖 Explanation:") == 10, f"Expected 10 '📖 Explanation:' occurrences, found {all_content.count('📖 Explanation:')}"
+
+    # 3. Verify no separate ANSWERS header
+    assert "ANSWERS & CONCEPTS" not in all_content, "Found legacy separate ANSWERS header!"
+
+    # 4. Verify message sizing under limits
     for i, msg in enumerate(messages, 1):
         print(f"  Message Part {i}: {len(msg)} characters")
         assert len(msg) <= 3500, f"Message part {i} exceeded 3500 chars limit ({len(msg)} chars)!"
         assert len(msg) <= 4096, f"Message part {i} exceeded hard 4096 limit!"
 
-    print("[PASS] Test 2: Single session generated 10 valid questions with safe message sizing.")
+    print("[PASS] Test 2: Inline Question-Answer format and Day 1 header verified.")
 
 
 def test_multi_session_simulation():
     print("\n=== TEST 3: Multi-Session Simulation (15 Sessions) ===")
+    from pathlib import Path
+    temp_state_file = Path(__file__).parent / "gate_state_test.json"
+
     sim_state = {
         "session_count": 0,
         "current_day": 1,
@@ -102,8 +124,11 @@ def test_multi_session_simulation():
         ga_count = sum(1 for q in qs if q["subject"] == "General Aptitude")
         assert ga_count >= 1, f"Session {s_num} missing General Aptitude!"
 
-        save_gate_state(sim_state, new_ids, theme)
+        save_gate_state(sim_state, new_ids, theme, state_file=temp_state_file)
         print(f"  Session {s_num:2d} (Day {sim_state['current_day']}, Phase {sim_state['current_phase']}): Theme '{theme}' | {len(qs)} Qs | GA: {ga_count}")
+
+    if temp_state_file.exists():
+        temp_state_file.unlink()
 
     print(f"\nTotal questions served across 15 sessions: {len(all_sent)}")
     print(f"Syllabus coverage achieved:\n{json.dumps(sim_state['syllabus_progress'], indent=2)}")
@@ -112,5 +137,5 @@ def test_multi_session_simulation():
 
 if __name__ == "__main__":
     test_question_bank_integrity()
-    test_single_session_generation()
+    test_single_session_inline_format()
     test_multi_session_simulation()

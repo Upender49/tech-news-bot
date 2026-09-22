@@ -80,7 +80,8 @@ def _init_empty_state() -> dict[str, Any]:
     }
 
 
-def save_gate_state(state: dict[str, Any], new_ids: list[str], session_theme: str) -> None:
+def save_gate_state(state: dict[str, Any], new_ids: list[str], session_theme: str, state_file: Path | None = None) -> None:
+    target_file = state_file or STATE_FILE
     state["session_count"] = state.get("session_count", 0) + 1
     state["current_day"] = (state["session_count"] // 8) + 1
     phase_num, phase_name = get_current_phase(state["current_day"])
@@ -103,11 +104,11 @@ def save_gate_state(state: dict[str, Any], new_ids: list[str], session_theme: st
 
     # Save to file
     try:
-        with open(STATE_FILE, "w", encoding="utf-8") as f:
+        with open(target_file, "w", encoding="utf-8") as f:
             json.dump(state, f, indent=2, ensure_ascii=False)
-        logger.info(f"Saved GATE state: session #{state['session_count']}, day {state['current_day']}")
+        logger.info(f"Saved GATE state to {target_file.name}: session #{state['session_count']}, day {state['current_day']}")
     except Exception as e:
-        logger.error(f"Failed to write {STATE_FILE}: {e}")
+        logger.error(f"Failed to write {target_file}: {e}")
 
 
 def _score_subject_priority(subject: str, state: dict[str, Any]) -> float:
@@ -279,7 +280,8 @@ def _difficulty_badge(difficulty: str) -> str:
     return mapping.get(difficulty.lower(), "⭐⭐⭐ GATE Level")
 
 
-def _format_single_question(i: int, q: dict[str, Any]) -> str:
+def _format_single_qa(i: int, q: dict[str, Any]) -> str:
+    """Formats a single question immediately followed by its answer, explanation, trap & takeaway."""
     lines = []
     q_type = q.get("type", "MCQ")
     marks = q.get("marks", 2)
@@ -287,109 +289,87 @@ def _format_single_question(i: int, q: dict[str, Any]) -> str:
     subject = q.get("subject", "")
     topic = q.get("topic", "")
     subtopic = q.get("subtopic", "")
-
-    header = f"<b>Q{i}. [{q_type} · {marks}M · {diff}]</b>"
-    breadcrumb = f"<i>📌 {subject} › {topic} › {subtopic}</i>\n" if subtopic else f"<i>📌 {subject} › {topic}</i>\n"
-
-    lines.append(header)
-    lines.append(breadcrumb)
-    lines.append(_format_code(q["q"]))
-    lines.append("")
-
-    if q_type in ("MCQ", "MSQ") and q.get("options"):
-        options = q["options"]
-        for opt_key in sorted(options.keys()):
-            lines.append(f"<b>{opt_key})</b> {_esc(options[opt_key])}")
-    elif q_type == "NAT":
-        lines.append("<i>[Enter Numerical Answer]</i>")
-
-    return "\n".join(lines)
-
-
-def _format_single_answer(i: int, q: dict[str, Any]) -> str:
-    lines = []
-    ans = q.get("answer", "")
-    q_type = q.get("type", "MCQ")
     source = q.get("source", "GATE-STYLE")
+    ans = q.get("answer", "")
     concept = q.get("concept", "")
     gate_trap = q.get("gate_trap", "")
     key_concept = q.get("key_concept", "")
     ref_url = q.get("reference_url")
 
-    lines.append(f"<b>{i}️⃣ Answer: {ans}</b> <i>({q_type})</i>")
+    # 1. Question Header & Breadcrumb
+    header = f"<b>Q{i}. [{q_type} · {marks}M · {diff}]</b>"
+    breadcrumb = f"<i>📌 {subject} › {topic} › {subtopic}</i>" if subtopic else f"<i>📌 {subject} › {topic}</i>"
+
+    lines.append(header)
+    lines.append(breadcrumb)
     if source != "GATE-STYLE":
         lines.append(f"<i>🏷️ {source}</i>")
+    lines.append("")
+    lines.append(_format_code(q["q"]))
+    lines.append("")
 
+    # 2. Options
+    if q_type in ("MCQ", "MSQ") and q.get("options"):
+        options = q["options"]
+        for opt_key in sorted(options.keys()):
+            lines.append(f"<b>{opt_key})</b> {_esc(options[opt_key])}")
+        lines.append("")
+    elif q_type == "NAT":
+        lines.append("<i>[Enter Numerical Answer]</i>\n")
+
+    # 3. Immediate Answer
+    lines.append(f"<b>✅ Answer: {ans}</b> <i>({q_type})</i>\n")
+
+    # 4. Concept
     if concept:
         lines.append(f"<b>📌 Concept:</b> {_esc(concept)}")
 
-    lines.append(f"<b>Solution:</b>\n{_format_code(q['explanation'])}")
+    # 5. Explanation
+    lines.append(f"<b>📖 Explanation:</b>\n{_format_code(q['explanation'])}")
 
+    # 6. GATE Trap (if applicable)
     if gate_trap:
-        lines.append(f"<b>⚠️ GATE Trap:</b> {_esc(gate_trap)}")
+        lines.append(f"\n<b>⚠️ GATE Trap:</b>\n{_esc(gate_trap)}")
 
+    # 7. Key Takeaway (if applicable)
     if key_concept:
-        lines.append(f"<b>💡 Key Takeaway:</b> {_esc(key_concept)}")
+        lines.append(f"\n<b>💡 Key Takeaway:</b>\n{_esc(key_concept)}")
 
+    # 8. Detailed Article Link for Long Explanations
     if ref_url:
-        lines.append(f'🔗 <a href="{ref_url}">Detailed Reference Article</a>')
+        lines.append(f'\n🔗 <b>Detailed Explanation:</b> <a href="{ref_url}">Read Reference Article</a>')
 
     return "\n".join(lines)
 
 
 def build_gate_quiz_messages(questions: list[dict[str, Any]], session_theme: str, state: dict[str, Any]) -> tuple[list[str], str]:
-    """Adaptively packs the 10 GATE questions into Telegram HTML messages <= 3500 chars."""
+    """Adaptively packs the 10 self-contained GATE Q&A blocks into Telegram HTML messages <= 3500 chars."""
     session_num = state.get("session_count", 0) + 1
     current_day = state.get("current_day", 1)
-    phase_name = state.get("phase_name", "Phase 1: Foundation")
+    phase_name = state.get("phase_name", "Phase 1: Foundation & Core Principles")
 
-    q_blocks = [_format_single_question(i + 1, q) for i, q in enumerate(questions)]
-    a_blocks = [_format_single_answer(i + 1, q) for i, q in enumerate(questions)]
+    # Subject & Topic from theme
+    parts = session_theme.split(" — ", 1)
+    sub_title = parts[0] if len(parts) > 0 else "Computer Science"
+    top_title = parts[1] if len(parts) > 1 else ""
+
+    session_header = (
+        "━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+        f"🎯 <b>GATE CSE — DAY {current_day}</b> (Session #{session_num})\n"
+        f"📚 <b>Subject:</b> {sub_title}\n"
+        f"📌 <b>Topic:</b> {top_title}\n"
+        f"📅 <i>{phase_name}</i>\n"
+        "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    )
+
+    qa_blocks = [_format_single_qa(i + 1, q) for i, q in enumerate(questions)]
 
     # Collect subjects and topics in this session
     subjects_in_session = sorted(set(q.get("subject", "") for q in questions))
     topics_in_session = sorted(set(q.get("topic", "") for q in questions))
 
-    session_header = (
-        "━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"🎯 <b>GATE CSE — SESSION #{session_num}</b>\n"
-        f"📚 <b>Theme:</b> {session_theme}\n"
-        f"📅 <b>Day {current_day}/90</b> · <i>{phase_name}</i>\n"
-        "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-    )
-
-    messages: list[str] = []
-    current_msg = session_header
-
-    for i, q_text in enumerate(q_blocks):
-        entry = q_text + "\n\n━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        if len(current_msg) + len(entry) > SAFE_MSG_LIMIT:
-            messages.append(current_msg.rstrip())
-            current_msg = f"<b>🎯 GATE CSE #{session_num} (Continued)</b>\n\n" + entry
-        else:
-            current_msg += entry
-
-    if current_msg.strip():
-        messages.append(current_msg.rstrip())
-
-    # Pack Answers
-    answers_header = (
-        "━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"📝 <b>SESSION #{session_num} — ANSWERS & CONCEPTS</b>\n"
-        "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-    )
-    current_msg = answers_header
-
-    for i, a_text in enumerate(a_blocks):
-        entry = a_text + "\n\n━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        if len(current_msg) + len(entry) > SAFE_MSG_LIMIT:
-            messages.append(current_msg.rstrip())
-            current_msg = f"<b>📝 ANSWERS #{session_num} (Continued)</b>\n\n" + entry
-        else:
-            current_msg += entry
-
-    # Session Summary Footer
     summary_footer = (
+        "━━━━━━━━━━━━━━━━━━━━━━━━━\n"
         "📊 <b>SESSION COVERAGE</b>\n"
         f"• <b>Subjects:</b> {', '.join(subjects_in_session)}\n"
         f"• <b>Topics:</b> {', '.join(topics_in_session)}\n\n"
@@ -397,6 +377,17 @@ def build_gate_quiz_messages(questions: list[dict[str, Any]], session_theme: str
         "Automated syllabus progression & spaced revision.\n"
         "━━━━━━━━━━━━━━━━━━━━━━━━━"
     )
+
+    messages: list[str] = []
+    current_msg = session_header
+
+    for i, qa_text in enumerate(qa_blocks):
+        entry = qa_text + "\n\n━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        if len(current_msg) + len(entry) > SAFE_MSG_LIMIT:
+            messages.append(current_msg.rstrip())
+            current_msg = f"<b>🎯 GATE CSE — DAY {current_day} (Continued)</b>\n\n" + entry
+        else:
+            current_msg += entry
 
     if len(current_msg) + len(summary_footer) > SAFE_MSG_LIMIT:
         messages.append(current_msg.rstrip())

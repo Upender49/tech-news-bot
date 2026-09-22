@@ -1,7 +1,9 @@
 {
-  "session_count": 27,
-  "current_day": 4,
+  "session_count": 0,
+  "start_date": "2026-09-22",
+  "current_day": 1,
   "current_phase": 1,
+  "phase_name": "Phase 1: Foundation & Core Principles",
   "sent_ids": [
     "dl_float_001",
     "toc_undec_001",
@@ -22,90 +24,11 @@
     "algo_mst_001",
     "os_mem_002"
   ],
-  "session_themes": [
-    "Computer Organization & Architecture — Machine Instructions & Addressing",
-    "Programming & Data Structures — Non-Linear Data Structures",
-    "Discrete Mathematics — Mathematical Logic",
-    "Computer Networks — Network Layer & IP Addressing",
-    "Theory of Computation — Regular Languages & Finite Automata",
-    "Operating Systems — Concurrency & Synchronization",
-    "Algorithms — Dynamic Programming",
-    "Computer Organization & Architecture — I/O Interface",
-    "Databases (DBMS) — File Organization & Indexing",
-    "Engineering Mathematics — Linear Algebra",
-    "Compiler Design — Intermediate Code & Optimization",
-    "Operating Systems — File Systems & Disk Scheduling",
-    "Algorithms — Asymptotic Analysis & Recurrences",
-    "Digital Logic — Combinational Circuits",
-    "Computer Networks — Transport Layer",
-    "Programming & Data Structures — Programming in C",
-    "Discrete Mathematics — Combinatorics",
-    "Databases (DBMS) — Normalization & Functional Dependencies",
-    "Operating Systems — CPU Scheduling",
-    "Theory of Computation — Turing Machines & Undecidability",
-    "Computer Organization & Architecture — Instruction Pipelining",
-    "Compiler Design — Syntax-Directed Translation (SDT)",
-    "Computer Networks — Application Layer & Security",
-    "Algorithms — Searching, Sorting & Hashing",
-    "Operating Systems — Deadlocks",
-    "Databases (DBMS) — SQL Querying",
-    "Digital Logic — Number Representations"
-  ],
+  "session_themes": [],
   "topic_history": {},
-  "ga_rotation_index": 3,
+  "ga_rotation_index": 0,
   "concept_tracker": {},
-  "syllabus_progress": {
-    "Computer Organization & Architecture": [
-      "Machine Instructions & Addressing",
-      "I/O Interface",
-      "Instruction Pipelining"
-    ],
-    "Programming & Data Structures": [
-      "Non-Linear Data Structures",
-      "Programming in C"
-    ],
-    "Discrete Mathematics": [
-      "Mathematical Logic",
-      "Combinatorics"
-    ],
-    "Computer Networks": [
-      "Network Layer & IP Addressing",
-      "Transport Layer",
-      "Application Layer & Security"
-    ],
-    "Theory of Computation": [
-      "Regular Languages & Finite Automata",
-      "Turing Machines & Undecidability"
-    ],
-    "Operating Systems": [
-      "Concurrency & Synchronization",
-      "File Systems & Disk Scheduling",
-      "CPU Scheduling",
-      "Deadlocks"
-    ],
-    "Algorithms": [
-      "Dynamic Programming",
-      "Asymptotic Analysis & Recurrences",
-      "Searching, Sorting & Hashing"
-    ],
-    "Databases (DBMS)": [
-      "File Organization & Indexing",
-      "Normalization & Functional Dependencies",
-      "SQL Querying"
-    ],
-    "Engineering Mathematics": [
-      "Linear Algebra"
-    ],
-    "Compiler Design": [
-      "Intermediate Code & Optimization",
-      "Syntax-Directed Translation (SDT)"
-    ],
-    "Digital Logic": [
-      "Combinational Circuits",
-      "Number Representations"
-    ]
-  },
+  "syllabus_progress": {},
   "weak_topics": [],
-  "subject_stats": {},
-  "phase_name": "Phase 1: Foundation & Core Principles"
+  "subject_stats": {}
 }
