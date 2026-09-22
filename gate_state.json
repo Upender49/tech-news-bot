@@ -1,44 +1,8 @@
 {
-  "session_count": 26,
+  "session_count": 27,
   "current_day": 4,
   "current_phase": 1,
   "sent_ids": [
-    "os_disk_001",
-    "ds_stack_001",
-    "cn_csmacd_001",
-    "dm_logic_001",
-    "cn_subnet_001",
-    "cn_tcp_001",
-    "ga_analytical_002",
-    "ga_analytical_001",
-    "pyq_gate2021_dsa_01",
-    "coa_hazard_001",
-    "pyq_gate2022_os_01",
-    "coa_cache_001",
-    "toc_cfl_001",
-    "ga_quant_002",
-    "algo_dp_001",
-    "algo_rec_001",
-    "algo_mst_001",
-    "ga_spatial_002",
-    "ga_spatial_001",
-    "em_prob_001",
-    "ds_bst_001",
-    "cd_lr_001",
-    "db_serial_001",
-    "db_btree_001",
-    "os_deadlock_001",
-    "os_proc_001",
-    "os_synch_001",
-    "os_mem_002",
-    "os_sched_001",
-    "ga_quant_003",
-    "ga_quant_001",
-    "os_mem_001",
-    "db_norm_001",
-    "ga_verbal_001",
-    "ga_verbal_002",
-    "ds_c_ptr_001",
     "dl_float_001",
     "toc_undec_001",
     "coa_pipe_001",
@@ -46,7 +10,17 @@
     "dm_graph_001",
     "ds_tree_001",
     "em_la_001",
-    "dl_kmap_001"
+    "dl_kmap_001",
+    "ga_analytical_001",
+    "ga_analytical_002",
+    "pyq_gate2021_dsa_01",
+    "cd_lr_001",
+    "ga_verbal_002",
+    "cn_tcp_001",
+    "ds_c_ptr_001",
+    "ga_quant_001",
+    "algo_mst_001",
+    "os_mem_002"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Machine Instructions & Addressing",
@@ -74,10 +48,11 @@
     "Computer Networks — Application Layer & Security",
     "Algorithms — Searching, Sorting & Hashing",
     "Operating Systems — Deadlocks",
-    "Databases (DBMS) — SQL Querying"
+    "Databases (DBMS) — SQL Querying",
+    "Digital Logic — Number Representations"
   ],
   "topic_history": {},
-  "ga_rotation_index": 2,
+  "ga_rotation_index": 3,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -126,7 +101,8 @@
       "Syntax-Directed Translation (SDT)"
     ],
     "Digital Logic": [
-      "Combinational Circuits"
+      "Combinational Circuits",
+      "Number Representations"
     ]
   },
   "weak_topics": [],
