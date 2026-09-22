@@ -1,5 +1,5 @@
 {
-  "session_count": 25,
+  "session_count": 26,
   "current_day": 4,
   "current_phase": 1,
   "sent_ids": [
@@ -36,7 +36,17 @@
     "ga_quant_001",
     "os_mem_001",
     "db_norm_001",
-    "ga_verbal_001"
+    "ga_verbal_001",
+    "ga_verbal_002",
+    "ds_c_ptr_001",
+    "dl_float_001",
+    "toc_undec_001",
+    "coa_pipe_001",
+    "dm_comb_001",
+    "dm_graph_001",
+    "ds_tree_001",
+    "em_la_001",
+    "dl_kmap_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Machine Instructions & Addressing",
@@ -63,10 +73,11 @@
     "Compiler Design — Syntax-Directed Translation (SDT)",
     "Computer Networks — Application Layer & Security",
     "Algorithms — Searching, Sorting & Hashing",
-    "Operating Systems — Deadlocks"
+    "Operating Systems — Deadlocks",
+    "Databases (DBMS) — SQL Querying"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -104,7 +115,8 @@
     ],
     "Databases (DBMS)": [
       "File Organization & Indexing",
-      "Normalization & Functional Dependencies"
+      "Normalization & Functional Dependencies",
+      "SQL Querying"
     ],
     "Engineering Mathematics": [
       "Linear Algebra"
