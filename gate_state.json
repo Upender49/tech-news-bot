@@ -1,5 +1,5 @@
 {
-  "session_count": 1,
+  "session_count": 2,
   "start_date": "2026-09-22",
   "current_day": 1,
   "current_phase": 1,
@@ -20,17 +20,31 @@
     "os_mem_001",
     "db_serial_001",
     "ga_analytical_001",
-    "algo_rec_001"
+    "algo_rec_001",
+    "ds_tree_001",
+    "ga_verbal_001",
+    "pyq_gate2022_os_01",
+    "algo_dp_001",
+    "toc_undec_001",
+    "algo_mst_001",
+    "dl_kmap_001",
+    "cn_subnet_001",
+    "cd_parse_001",
+    "cn_csmacd_001"
   ],
   "session_themes": [
-    "Computer Organization & Architecture — Memory Hierarchy"
+    "Computer Organization & Architecture — Memory Hierarchy",
+    "Programming & Data Structures — Programming in C"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
       "Memory Hierarchy"
+    ],
+    "Programming & Data Structures": [
+      "Programming in C"
     ]
   },
   "weak_topics": [],
