@@ -1,5 +1,5 @@
 {
-  "session_count": 5,
+  "session_count": 6,
   "start_date": "2026-09-22",
   "current_day": 1,
   "current_phase": 1,
@@ -24,17 +24,28 @@
     "ds_tree_001",
     "dm_logic_001",
     "os_deadlock_001",
-    "coa_cache_001"
+    "coa_cache_001",
+    "algo_dp_001",
+    "algo_mst_001",
+    "algo_rec_001",
+    "ga_verbal_002",
+    "ga_verbal_001",
+    "pyq_gate2022_os_01",
+    "dm_comb_001",
+    "cn_tcp_001",
+    "ds_bst_001",
+    "os_sched_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Memory Hierarchy",
     "Programming & Data Structures — Programming in C",
     "Discrete Mathematics — Mathematical Logic",
     "Computer Networks — Application Layer & Security",
-    "Theory of Computation — Turing Machines & Undecidability"
+    "Theory of Computation — Turing Machines & Undecidability",
+    "Algorithms — Searching, Sorting & Hashing"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -51,6 +62,9 @@
     ],
     "Theory of Computation": [
       "Turing Machines & Undecidability"
+    ],
+    "Algorithms": [
+      "Searching, Sorting & Hashing"
     ]
   },
   "weak_topics": [],
