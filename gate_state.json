@@ -1,5 +1,5 @@
 {
-  "session_count": 8,
+  "session_count": 9,
   "start_date": "2026-09-22",
   "current_day": 2,
   "current_phase": 1,
@@ -18,7 +18,17 @@
     "ds_bst_001",
     "algo_rec_001",
     "ga_quant_001",
-    "ga_analytical_001"
+    "ga_analytical_001",
+    "em_la_001",
+    "em_prob_001",
+    "ga_quant_002",
+    "ga_quant_003",
+    "pyq_gate2022_os_01",
+    "os_mem_001",
+    "cn_tcp_001",
+    "ga_verbal_001",
+    "toc_cfl_001",
+    "coa_pipe_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Memory Hierarchy",
@@ -28,10 +38,11 @@
     "Theory of Computation — Turing Machines & Undecidability",
     "Algorithms — Searching, Sorting & Hashing",
     "Operating Systems — Processes & Threads",
-    "Databases (DBMS) — ER Model & Relational Model"
+    "Databases (DBMS) — ER Model & Relational Model",
+    "Engineering Mathematics — Linear Algebra"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -57,6 +68,9 @@
     ],
     "Databases (DBMS)": [
       "ER Model & Relational Model"
+    ],
+    "Engineering Mathematics": [
+      "Linear Algebra"
     ]
   },
   "weak_topics": [],
