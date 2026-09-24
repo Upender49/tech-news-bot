@@ -1,5 +1,5 @@
 {
-  "session_count": 9,
+  "session_count": 10,
   "start_date": "2026-09-22",
   "current_day": 2,
   "current_phase": 1,
@@ -28,7 +28,17 @@
     "cn_tcp_001",
     "ga_verbal_001",
     "toc_cfl_001",
-    "coa_pipe_001"
+    "coa_pipe_001",
+    "os_sched_001",
+    "os_synch_001",
+    "os_proc_001",
+    "os_mem_002",
+    "os_disk_001",
+    "ga_verbal_002",
+    "dm_comb_001",
+    "coa_cache_001",
+    "dm_graph_001",
+    "cd_parse_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Memory Hierarchy",
@@ -39,10 +49,11 @@
     "Algorithms — Searching, Sorting & Hashing",
     "Operating Systems — Processes & Threads",
     "Databases (DBMS) — ER Model & Relational Model",
-    "Engineering Mathematics — Linear Algebra"
+    "Engineering Mathematics — Linear Algebra",
+    "Operating Systems — CPU Scheduling"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -64,7 +75,8 @@
       "Searching, Sorting & Hashing"
     ],
     "Operating Systems": [
-      "Processes & Threads"
+      "Processes & Threads",
+      "CPU Scheduling"
     ],
     "Databases (DBMS)": [
       "ER Model & Relational Model"
