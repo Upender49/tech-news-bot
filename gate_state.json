@@ -1,5 +1,5 @@
 {
-  "session_count": 12,
+  "session_count": 13,
   "start_date": "2026-09-22",
   "current_day": 2,
   "current_phase": 1,
@@ -22,7 +22,17 @@
     "os_mem_001",
     "db_serial_001",
     "dm_graph_001",
-    "ds_bst_001"
+    "ds_bst_001",
+    "coa_hazard_001",
+    "coa_pipe_001",
+    "coa_cache_001",
+    "ga_quant_003",
+    "ga_quant_002",
+    "pyq_gate2021_dsa_01",
+    "os_mem_002",
+    "ga_analytical_001",
+    "cd_lr_001",
+    "db_btree_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Memory Hierarchy",
@@ -36,14 +46,16 @@
     "Engineering Mathematics — Linear Algebra",
     "Operating Systems — CPU Scheduling",
     "Compiler Design — Syntax Analysis & Parsing",
-    "Computer Networks — Data Link Layer"
+    "Computer Networks — Data Link Layer",
+    "Computer Organization & Architecture — I/O Interface"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
-      "Memory Hierarchy"
+      "Memory Hierarchy",
+      "I/O Interface"
     ],
     "Programming & Data Structures": [
       "Programming in C"
