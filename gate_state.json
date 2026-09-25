@@ -1,46 +1,10 @@
 {
-  "session_count": 11,
+  "session_count": 12,
   "start_date": "2026-09-22",
   "current_day": 2,
   "current_phase": 1,
   "phase_name": "Phase 1: Foundation & Core Principles",
   "sent_ids": [
-    "dl_kmap_001",
-    "coa_hazard_001",
-    "cn_csmacd_001",
-    "ds_stack_001",
-    "db_serial_001",
-    "db_norm_001",
-    "db_btree_001",
-    "ga_spatial_002",
-    "ga_spatial_001",
-    "pyq_gate2021_dsa_01",
-    "ds_bst_001",
-    "algo_rec_001",
-    "ga_quant_001",
-    "ga_analytical_001",
-    "em_la_001",
-    "em_prob_001",
-    "ga_quant_002",
-    "ga_quant_003",
-    "pyq_gate2022_os_01",
-    "os_mem_001",
-    "cn_tcp_001",
-    "ga_verbal_001",
-    "toc_cfl_001",
-    "coa_pipe_001",
-    "os_sched_001",
-    "os_synch_001",
-    "os_proc_001",
-    "os_mem_002",
-    "os_disk_001",
-    "ga_verbal_002",
-    "dm_comb_001",
-    "coa_cache_001",
-    "dm_graph_001",
-    "cd_parse_001",
-    "cd_lr_001",
-    "ga_analytical_002",
     "dm_logic_001",
     "os_deadlock_001",
     "ds_c_ptr_001",
@@ -48,7 +12,17 @@
     "ds_tree_001",
     "dl_float_001",
     "toc_undec_001",
-    "cn_subnet_001"
+    "cn_subnet_001",
+    "cn_csmacd_001",
+    "cn_tcp_001",
+    "ga_spatial_001",
+    "ga_spatial_002",
+    "pyq_gate2022_os_01",
+    "ga_verbal_002",
+    "os_mem_001",
+    "db_serial_001",
+    "dm_graph_001",
+    "ds_bst_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Memory Hierarchy",
@@ -61,10 +35,11 @@
     "Databases (DBMS) — ER Model & Relational Model",
     "Engineering Mathematics — Linear Algebra",
     "Operating Systems — CPU Scheduling",
-    "Compiler Design — Syntax Analysis & Parsing"
+    "Compiler Design — Syntax Analysis & Parsing",
+    "Computer Networks — Data Link Layer"
   ],
   "topic_history": {},
-  "ga_rotation_index": 3,
+  "ga_rotation_index": 4,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -77,7 +52,8 @@
       "Mathematical Logic"
     ],
     "Computer Networks": [
-      "Application Layer & Security"
+      "Application Layer & Security",
+      "Data Link Layer"
     ],
     "Theory of Computation": [
       "Turing Machines & Undecidability"
