@@ -1,5 +1,5 @@
 {
-  "session_count": 16,
+  "session_count": 17,
   "start_date": "2026-09-22",
   "current_day": 3,
   "current_phase": 1,
@@ -26,7 +26,17 @@
     "dm_graph_001",
     "ga_quant_001",
     "ga_quant_003",
-    "algo_rec_001"
+    "algo_rec_001",
+    "db_serial_001",
+    "db_norm_001",
+    "db_btree_001",
+    "ga_quant_002",
+    "em_prob_001",
+    "coa_cache_001",
+    "ga_verbal_002",
+    "algo_dp_001",
+    "os_sched_001",
+    "algo_mst_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Memory Hierarchy",
@@ -44,10 +54,11 @@
     "Computer Organization & Architecture — I/O Interface",
     "Algorithms — Divide-and-Conquer & Greedy",
     "Digital Logic — Combinational Circuits",
-    "Programming & Data Structures — Non-Linear Data Structures"
+    "Programming & Data Structures — Non-Linear Data Structures",
+    "Databases (DBMS) — Transactions & Concurrency Control"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -77,7 +88,8 @@
       "CPU Scheduling"
     ],
     "Databases (DBMS)": [
-      "ER Model & Relational Model"
+      "ER Model & Relational Model",
+      "Transactions & Concurrency Control"
     ],
     "Engineering Mathematics": [
       "Linear Algebra"
