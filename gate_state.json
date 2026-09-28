@@ -1,50 +1,24 @@
 {
-  "session_count": 25,
+  "session_count": 26,
   "start_date": "2026-09-22",
   "current_day": 4,
   "current_phase": 1,
   "phase_name": "Phase 1: Foundation & Core Principles",
   "sent_ids": [
-    "ga_quant_002",
-    "ga_spatial_001",
-    "algo_rec_001",
-    "em_la_001",
-    "os_mem_001",
-    "os_deadlock_001",
-    "algo_mst_001",
-    "ds_bst_001",
-    "os_synch_001",
-    "em_prob_001",
-    "algo_dp_001",
-    "ga_analytical_001",
-    "ga_analytical_002",
-    "pyq_gate2021_dsa_01",
-    "cn_csmacd_001",
-    "coa_pipe_001",
-    "toc_cfl_001",
-    "dl_float_001",
-    "coa_cache_001",
-    "ds_c_ptr_001",
-    "os_disk_001",
-    "os_mem_002",
-    "os_proc_001",
-    "pyq_gate2022_os_01",
-    "os_sched_001",
-    "ga_spatial_002",
-    "ds_tree_001",
-    "cd_lr_001",
-    "dm_logic_001",
-    "dl_kmap_001",
-    "db_btree_001",
-    "db_norm_001",
-    "db_serial_001",
-    "ga_quant_001",
-    "ga_quant_003",
-    "toc_undec_001",
     "dm_comb_001",
     "ds_stack_001",
     "cd_parse_001",
-    "coa_hazard_001"
+    "coa_hazard_001",
+    "dl_float_001",
+    "dl_kmap_001",
+    "ga_verbal_002",
+    "ga_verbal_001",
+    "pyq_gate2021_dsa_01",
+    "em_la_001",
+    "ga_spatial_001",
+    "os_deadlock_001",
+    "os_disk_001",
+    "toc_dfa_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Memory Hierarchy",
@@ -71,10 +45,11 @@
     "Computer Networks — Transport Layer",
     "Algorithms — Asymptotic Analysis & Recurrences",
     "Operating Systems — File Systems & Disk Scheduling",
-    "Databases (DBMS) — File Organization & Indexing"
+    "Databases (DBMS) — File Organization & Indexing",
+    "Digital Logic — Number Representations"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -122,7 +97,8 @@
       "Runtime Environments"
     ],
     "Digital Logic": [
-      "Combinational Circuits"
+      "Combinational Circuits",
+      "Number Representations"
     ]
   },
   "weak_topics": [],
