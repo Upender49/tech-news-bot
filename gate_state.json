@@ -1,5 +1,5 @@
 {
-  "session_count": 28,
+  "session_count": 29,
   "start_date": "2026-09-22",
   "current_day": 4,
   "current_phase": 1,
@@ -38,7 +38,17 @@
     "ds_bst_001",
     "db_btree_001",
     "algo_rec_001",
-    "toc_cfl_001"
+    "toc_cfl_001",
+    "em_prob_001",
+    "ga_verbal_002",
+    "ga_spatial_001",
+    "algo_mst_001",
+    "os_sched_001",
+    "os_proc_001",
+    "db_norm_001",
+    "cn_csmacd_001",
+    "os_mem_001",
+    "cn_tcp_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Memory Hierarchy",
@@ -68,10 +78,11 @@
     "Databases (DBMS) — File Organization & Indexing",
     "Digital Logic — Number Representations",
     "Computer Organization & Architecture — Instruction Pipelining",
-    "Discrete Mathematics — Set Theory & Algebra"
+    "Discrete Mathematics — Set Theory & Algebra",
+    "Engineering Mathematics — Probability & Statistics"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -114,7 +125,8 @@
       "File Organization & Indexing"
     ],
     "Engineering Mathematics": [
-      "Linear Algebra"
+      "Linear Algebra",
+      "Probability & Statistics"
     ],
     "Compiler Design": [
       "Syntax Analysis & Parsing",
