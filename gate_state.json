@@ -1,5 +1,5 @@
 {
-  "session_count": 44,
+  "session_count": 45,
   "start_date": "2026-09-22",
   "current_day": 6,
   "current_phase": 1,
@@ -18,7 +18,17 @@
     "os_deadlock_001",
     "coa_hazard_001",
     "cn_csmacd_001",
-    "toc_dfa_001"
+    "toc_dfa_001",
+    "em_la_001",
+    "em_prob_001",
+    "ga_quant_003",
+    "ga_quant_002",
+    "pyq_gate2021_dsa_01",
+    "ds_stack_001",
+    "cn_subnet_001",
+    "toc_cfl_001",
+    "dm_logic_001",
+    "ga_analytical_002"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Memory Hierarchy",
@@ -64,10 +74,11 @@
     "Discrete Mathematics — Combinatorics",
     "Computer Networks — Layering & Physical Layer",
     "Operating Systems — Deadlocks",
-    "Algorithms — Graph Algorithms"
+    "Algorithms — Graph Algorithms",
+    "Engineering Mathematics — Calculus"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -123,7 +134,8 @@
     ],
     "Engineering Mathematics": [
       "Linear Algebra",
-      "Probability & Statistics"
+      "Probability & Statistics",
+      "Calculus"
     ],
     "Compiler Design": [
       "Syntax Analysis & Parsing",
