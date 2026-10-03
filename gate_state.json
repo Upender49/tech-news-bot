@@ -1,5 +1,5 @@
 {
-  "session_count": 41,
+  "session_count": 42,
   "start_date": "2026-09-22",
   "current_day": 6,
   "current_phase": 1,
@@ -24,7 +24,17 @@
     "ga_analytical_001",
     "ds_c_ptr_001",
     "cn_csmacd_001",
-    "cn_subnet_001"
+    "cn_subnet_001",
+    "ga_verbal_002",
+    "ga_verbal_001",
+    "pyq_gate2021_dsa_01",
+    "os_sched_001",
+    "algo_mst_001",
+    "ds_stack_001",
+    "ga_quant_001",
+    "toc_cfl_001",
+    "ds_tree_001",
+    "os_proc_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Memory Hierarchy",
@@ -67,10 +77,11 @@
     "Theory of Computation — Context-Free Languages & Pushdown Automata",
     "Computer Organization & Architecture — Machine Instructions & Addressing",
     "Compiler Design — Syntax-Directed Translation (SDT)",
-    "Discrete Mathematics — Combinatorics"
+    "Discrete Mathematics — Combinatorics",
+    "Computer Networks — Layering & Physical Layer"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -95,7 +106,8 @@
       "Application Layer & Security",
       "Data Link Layer",
       "Transport Layer",
-      "Network Layer & IP Addressing"
+      "Network Layer & IP Addressing",
+      "Layering & Physical Layer"
     ],
     "Theory of Computation": [
       "Turing Machines & Undecidability",
