@@ -1,5 +1,5 @@
 {
-  "session_count": 48,
+  "session_count": 49,
   "start_date": "2026-09-22",
   "current_day": 7,
   "current_phase": 1,
@@ -22,7 +22,17 @@
     "ds_c_ptr_001",
     "em_la_001",
     "toc_undec_001",
-    "coa_hazard_001"
+    "coa_hazard_001",
+    "ds_stack_001",
+    "ds_bst_001",
+    "ds_tree_001",
+    "ga_quant_001",
+    "ga_quant_003",
+    "dl_float_001",
+    "cn_tcp_001",
+    "ga_analytical_001",
+    "algo_rec_001",
+    "ga_analytical_002"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Memory Hierarchy",
@@ -72,10 +82,11 @@
     "Engineering Mathematics — Calculus",
     "Programming & Data Structures — Linear Data Structures",
     "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
-    "Operating Systems — File Systems & Disk Scheduling"
+    "Operating Systems — File Systems & Disk Scheduling",
+    "Programming & Data Structures — Programming in C"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
