@@ -1,5 +1,5 @@
 {
-  "session_count": 51,
+  "session_count": 52,
   "start_date": "2026-09-22",
   "current_day": 7,
   "current_phase": 1,
@@ -16,10 +16,19 @@
     "ga_analytical_002",
     "pyq_gate2021_dsa_01",
     "ga_quant_003",
-    "db_serial_001"
+    "db_serial_001",
+    "ds_tree_001",
+    "ds_bst_001",
+    "ds_stack_001",
+    "ds_c_ptr_001",
+    "ga_spatial_001",
+    "ga_spatial_002",
+    "os_synch_001",
+    "algo_dp_001",
+    "ga_verbal_001",
+    "dm_comb_001"
   ],
   "session_themes": [
-    "Programming & Data Structures — Programming in C",
     "Discrete Mathematics — Mathematical Logic",
     "Computer Networks — Application Layer & Security",
     "Theory of Computation — Turing Machines & Undecidability",
@@ -68,10 +77,11 @@
     "Operating Systems — File Systems & Disk Scheduling",
     "Programming & Data Structures — Programming in C",
     "Databases (DBMS) — Normalization & Functional Dependencies",
-    "Operating Systems — CPU Scheduling"
+    "Operating Systems — CPU Scheduling",
+    "Programming & Data Structures — Non-Linear Data Structures"
   ],
   "topic_history": {},
-  "ga_rotation_index": 3,
+  "ga_rotation_index": 4,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
