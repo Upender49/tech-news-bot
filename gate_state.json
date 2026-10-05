@@ -1,5 +1,5 @@
 {
-  "session_count": 49,
+  "session_count": 50,
   "start_date": "2026-09-22",
   "current_day": 7,
   "current_phase": 1,
@@ -32,7 +32,17 @@
     "cn_tcp_001",
     "ga_analytical_001",
     "algo_rec_001",
-    "ga_analytical_002"
+    "ga_analytical_002",
+    "db_norm_001",
+    "db_btree_001",
+    "ga_verbal_002",
+    "ga_verbal_001",
+    "algo_mst_001",
+    "toc_dfa_001",
+    "dm_comb_001",
+    "dm_logic_001",
+    "cd_lr_001",
+    "coa_pipe_001"
   ],
   "session_themes": [
     "Computer Organization & Architecture — Memory Hierarchy",
@@ -83,10 +93,11 @@
     "Programming & Data Structures — Linear Data Structures",
     "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
     "Operating Systems — File Systems & Disk Scheduling",
-    "Programming & Data Structures — Programming in C"
+    "Programming & Data Structures — Programming in C",
+    "Databases (DBMS) — Normalization & Functional Dependencies"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -138,7 +149,8 @@
       "ER Model & Relational Model",
       "Transactions & Concurrency Control",
       "File Organization & Indexing",
-      "SQL Querying"
+      "SQL Querying",
+      "Normalization & Functional Dependencies"
     ],
     "Engineering Mathematics": [
       "Linear Algebra",
