@@ -1,5 +1,5 @@
 {
-  "session_count": 52,
+  "session_count": 53,
   "start_date": "2026-09-22",
   "current_day": 7,
   "current_phase": 1,
@@ -26,10 +26,19 @@
     "os_synch_001",
     "algo_dp_001",
     "ga_verbal_001",
-    "dm_comb_001"
+    "dm_comb_001",
+    "dl_kmap_001",
+    "dl_float_001",
+    "ga_quant_002",
+    "ga_quant_001",
+    "cn_subnet_001",
+    "ga_verbal_002",
+    "algo_mst_001",
+    "toc_undec_001",
+    "cn_tcp_001",
+    "os_proc_001"
   ],
   "session_themes": [
-    "Discrete Mathematics — Mathematical Logic",
     "Computer Networks — Application Layer & Security",
     "Theory of Computation — Turing Machines & Undecidability",
     "Algorithms — Searching, Sorting & Hashing",
@@ -78,10 +87,11 @@
     "Programming & Data Structures — Programming in C",
     "Databases (DBMS) — Normalization & Functional Dependencies",
     "Operating Systems — CPU Scheduling",
-    "Programming & Data Structures — Non-Linear Data Structures"
+    "Programming & Data Structures — Non-Linear Data Structures",
+    "Digital Logic — Sequential Circuits"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -150,7 +160,8 @@
     "Digital Logic": [
       "Combinational Circuits",
       "Number Representations",
-      "Boolean Algebra & Minimization"
+      "Boolean Algebra & Minimization",
+      "Sequential Circuits"
     ]
   },
   "weak_topics": [],
