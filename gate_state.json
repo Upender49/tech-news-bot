@@ -1,5 +1,5 @@
 {
-  "session_count": 53,
+  "session_count": 54,
   "start_date": "2026-09-22",
   "current_day": 7,
   "current_phase": 1,
@@ -36,10 +36,19 @@
     "algo_mst_001",
     "toc_undec_001",
     "cn_tcp_001",
-    "os_proc_001"
+    "os_proc_001",
+    "os_deadlock_001",
+    "ga_analytical_001",
+    "ga_verbal_001",
+    "toc_dfa_001",
+    "cn_csmacd_001",
+    "toc_cfl_001",
+    "db_btree_001",
+    "em_prob_001",
+    "coa_cache_001",
+    "dm_graph_001"
   ],
   "session_themes": [
-    "Computer Networks — Application Layer & Security",
     "Theory of Computation — Turing Machines & Undecidability",
     "Algorithms — Searching, Sorting & Hashing",
     "Operating Systems — Processes & Threads",
@@ -88,10 +97,11 @@
     "Databases (DBMS) — Normalization & Functional Dependencies",
     "Operating Systems — CPU Scheduling",
     "Programming & Data Structures — Non-Linear Data Structures",
-    "Digital Logic — Sequential Circuits"
+    "Digital Logic — Sequential Circuits",
+    "Operating Systems — Concurrency & Synchronization"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
