@@ -1,5 +1,5 @@
 {
-  "session_count": 56,
+  "session_count": 57,
   "start_date": "2026-09-22",
   "current_day": 8,
   "current_phase": 1,
@@ -30,10 +30,19 @@
     "algo_mst_001",
     "os_deadlock_001",
     "cn_tcp_001",
-    "ga_quant_001"
+    "ga_quant_001",
+    "os_mem_001",
+    "os_mem_002",
+    "os_disk_001",
+    "os_synch_001",
+    "ga_quant_003",
+    "ga_quant_002",
+    "coa_pipe_001",
+    "ga_verbal_002",
+    "dm_logic_001",
+    "ga_verbal_001"
   ],
   "session_themes": [
-    "Operating Systems — Processes & Threads",
     "Databases (DBMS) — ER Model & Relational Model",
     "Engineering Mathematics — Linear Algebra",
     "Operating Systems — CPU Scheduling",
@@ -82,10 +91,11 @@
     "Digital Logic — Sequential Circuits",
     "Operating Systems — Concurrency & Synchronization",
     "Programming & Data Structures — Linear Data Structures",
-    "Compiler Design — Intermediate Code & Optimization"
+    "Compiler Design — Intermediate Code & Optimization",
+    "Operating Systems — Memory Management & Virtual Memory"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
