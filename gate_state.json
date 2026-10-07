@@ -1,7 +1,7 @@
 {
-  "session_count": 55,
+  "session_count": 56,
   "start_date": "2026-09-22",
-  "current_day": 7,
+  "current_day": 8,
   "current_phase": 1,
   "phase_name": "Phase 1: Foundation & Core Principles",
   "sent_ids": [
@@ -20,10 +20,19 @@
     "ga_analytical_001",
     "pyq_gate2022_os_01",
     "db_norm_001",
-    "ga_spatial_002"
+    "ga_spatial_002",
+    "cd_parse_001",
+    "cd_lr_001",
+    "ga_spatial_001",
+    "os_sched_001",
+    "toc_undec_001",
+    "os_proc_001",
+    "algo_mst_001",
+    "os_deadlock_001",
+    "cn_tcp_001",
+    "ga_quant_001"
   ],
   "session_themes": [
-    "Algorithms — Searching, Sorting & Hashing",
     "Operating Systems — Processes & Threads",
     "Databases (DBMS) — ER Model & Relational Model",
     "Engineering Mathematics — Linear Algebra",
@@ -72,10 +81,11 @@
     "Programming & Data Structures — Non-Linear Data Structures",
     "Digital Logic — Sequential Circuits",
     "Operating Systems — Concurrency & Synchronization",
-    "Programming & Data Structures — Linear Data Structures"
+    "Programming & Data Structures — Linear Data Structures",
+    "Compiler Design — Intermediate Code & Optimization"
   ],
   "topic_history": {},
-  "ga_rotation_index": 3,
+  "ga_rotation_index": 4,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
@@ -139,7 +149,8 @@
       "Syntax Analysis & Parsing",
       "Runtime Environments",
       "Lexical Analysis",
-      "Syntax-Directed Translation (SDT)"
+      "Syntax-Directed Translation (SDT)",
+      "Intermediate Code & Optimization"
     ],
     "Digital Logic": [
       "Combinational Circuits",
