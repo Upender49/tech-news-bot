@@ -1,5 +1,5 @@
 {
-  "session_count": 59,
+  "session_count": 60,
   "start_date": "2026-09-22",
   "current_day": 8,
   "current_phase": 1,
@@ -24,10 +24,19 @@
     "cn_csmacd_001",
     "ds_c_ptr_001",
     "os_synch_001",
-    "os_mem_001"
+    "os_mem_001",
+    "coa_cache_001",
+    "coa_pipe_001",
+    "ga_spatial_001",
+    "pyq_gate2021_dsa_01",
+    "db_btree_001",
+    "ds_tree_001",
+    "os_proc_001",
+    "em_prob_001",
+    "ga_quant_002",
+    "os_deadlock_001"
   ],
   "session_themes": [
-    "Operating Systems — CPU Scheduling",
     "Compiler Design — Syntax Analysis & Parsing",
     "Computer Networks — Data Link Layer",
     "Computer Organization & Architecture — I/O Interface",
@@ -76,10 +85,11 @@
     "Compiler Design — Intermediate Code & Optimization",
     "Operating Systems — Memory Management & Virtual Memory",
     "Programming & Data Structures — Non-Linear Data Structures",
-    "Discrete Mathematics — Combinatorics"
+    "Discrete Mathematics — Combinatorics",
+    "Computer Organization & Architecture — ALU, Data-Path & Control Unit"
   ],
   "topic_history": {},
-  "ga_rotation_index": 3,
+  "ga_rotation_index": 4,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
