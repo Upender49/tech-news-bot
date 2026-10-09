@@ -1,5 +1,5 @@
 {
-  "session_count": 60,
+  "session_count": 61,
   "start_date": "2026-09-22",
   "current_day": 8,
   "current_phase": 1,
@@ -34,10 +34,19 @@
     "os_proc_001",
     "em_prob_001",
     "ga_quant_002",
-    "os_deadlock_001"
+    "os_deadlock_001",
+    "ds_bst_001",
+    "ds_stack_001",
+    "ga_quant_003",
+    "ga_quant_001",
+    "os_disk_001",
+    "toc_dfa_001",
+    "os_mem_002",
+    "toc_cfl_001",
+    "algo_mst_001",
+    "em_la_001"
   ],
   "session_themes": [
-    "Compiler Design — Syntax Analysis & Parsing",
     "Computer Networks — Data Link Layer",
     "Computer Organization & Architecture — I/O Interface",
     "Algorithms — Divide-and-Conquer & Greedy",
@@ -86,10 +95,11 @@
     "Operating Systems — Memory Management & Virtual Memory",
     "Programming & Data Structures — Non-Linear Data Structures",
     "Discrete Mathematics — Combinatorics",
-    "Computer Organization & Architecture — ALU, Data-Path & Control Unit"
+    "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
+    "Programming & Data Structures — Non-Linear Data Structures"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
