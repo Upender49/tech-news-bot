@@ -1,5 +1,5 @@
 {
-  "session_count": 64,
+  "session_count": 65,
   "start_date": "2026-09-22",
   "current_day": 9,
   "current_phase": 1,
@@ -38,10 +38,19 @@
     "toc_undec_001",
     "dl_float_001",
     "ga_quant_003",
-    "ds_stack_001"
+    "ds_stack_001",
+    "ga_quant_002",
+    "ga_quant_001",
+    "ds_tree_001",
+    "cn_tcp_001",
+    "ds_bst_001",
+    "cn_subnet_001",
+    "db_norm_001",
+    "algo_rec_001",
+    "dl_kmap_001",
+    "cd_parse_001"
   ],
   "session_themes": [
-    "Digital Logic — Combinational Circuits",
     "Programming & Data Structures — Non-Linear Data Structures",
     "Databases (DBMS) — Transactions & Concurrency Control",
     "Operating Systems — Concurrency & Synchronization",
@@ -90,10 +99,11 @@
     "Programming & Data Structures — Non-Linear Data Structures",
     "Discrete Mathematics — Graph Theory",
     "Operating Systems — Deadlocks",
-    "Computer Organization & Architecture — I/O Interface"
+    "Computer Organization & Architecture — I/O Interface",
+    "Discrete Mathematics — Graph Theory"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
