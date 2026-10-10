@@ -1,5 +1,5 @@
 {
-  "session_count": 66,
+  "session_count": 67,
   "start_date": "2026-09-22",
   "current_day": 9,
   "current_phase": 1,
@@ -22,10 +22,19 @@
     "ga_verbal_002",
     "pyq_gate2021_dsa_01",
     "os_mem_002",
-    "ds_c_ptr_001"
+    "ds_c_ptr_001",
+    "ds_stack_001",
+    "ga_analytical_001",
+    "ga_analytical_002",
+    "algo_dp_001",
+    "db_serial_001",
+    "em_prob_001",
+    "os_deadlock_001",
+    "toc_undec_001",
+    "algo_mst_001",
+    "em_la_001"
   ],
   "session_themes": [
-    "Databases (DBMS) — Transactions & Concurrency Control",
     "Operating Systems — Concurrency & Synchronization",
     "Discrete Mathematics — Graph Theory",
     "Theory of Computation — Regular Languages & Finite Automata",
@@ -74,10 +83,11 @@
     "Operating Systems — Deadlocks",
     "Computer Organization & Architecture — I/O Interface",
     "Discrete Mathematics — Graph Theory",
-    "Operating Systems — CPU Scheduling"
+    "Operating Systems — CPU Scheduling",
+    "Programming & Data Structures — Linear Data Structures"
   ],
   "topic_history": {},
-  "ga_rotation_index": 2,
+  "ga_rotation_index": 3,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
