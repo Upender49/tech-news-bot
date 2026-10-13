@@ -1,5 +1,5 @@
 {
-  "session_count": 73,
+  "session_count": 74,
   "start_date": "2026-09-22",
   "current_day": 10,
   "current_phase": 1,
@@ -20,10 +20,19 @@
     "ga_quant_003",
     "pyq_gate2022_os_01",
     "em_prob_001",
-    "os_disk_001"
+    "os_disk_001",
+    "os_synch_001",
+    "os_mem_001",
+    "os_sched_001",
+    "os_proc_001",
+    "os_deadlock_001",
+    "ga_verbal_002",
+    "ga_verbal_001",
+    "em_la_001",
+    "toc_dfa_001",
+    "cd_parse_001"
   ],
   "session_themes": [
-    "Operating Systems — File Systems & Disk Scheduling",
     "Databases (DBMS) — File Organization & Indexing",
     "Digital Logic — Number Representations",
     "Computer Organization & Architecture — Instruction Pipelining",
@@ -72,10 +81,11 @@
     "Programming & Data Structures — Non-Linear Data Structures",
     "Discrete Mathematics — Graph Theory",
     "Computer Organization & Architecture — Machine Instructions & Addressing",
-    "Programming & Data Structures — Non-Linear Data Structures"
+    "Programming & Data Structures — Non-Linear Data Structures",
+    "Operating Systems — Concurrency & Synchronization"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
