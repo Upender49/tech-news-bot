@@ -1,5 +1,5 @@
 {
-  "session_count": 77,
+  "session_count": 78,
   "start_date": "2026-09-22",
   "current_day": 10,
   "current_phase": 1,
@@ -24,10 +24,19 @@
     "ga_quant_003",
     "pyq_gate2021_dsa_01",
     "ds_stack_001",
-    "cd_lr_001"
+    "cd_lr_001",
+    "coa_pipe_001",
+    "coa_hazard_001",
+    "coa_cache_001",
+    "ga_verbal_002",
+    "ga_verbal_001",
+    "algo_mst_001",
+    "ga_spatial_002",
+    "dl_kmap_001",
+    "ds_tree_001",
+    "os_proc_001"
   ],
   "session_themes": [
-    "Discrete Mathematics — Set Theory & Algebra",
     "Engineering Mathematics — Probability & Statistics",
     "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
     "Programming & Data Structures — Linear Data Structures",
@@ -76,10 +85,11 @@
     "Operating Systems — Concurrency & Synchronization",
     "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
     "Discrete Mathematics — Combinatorics",
-    "Operating Systems — Deadlocks"
+    "Operating Systems — Deadlocks",
+    "Computer Organization & Architecture — I/O Interface"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
