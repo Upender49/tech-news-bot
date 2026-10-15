@@ -1,5 +1,5 @@
 {
-  "session_count": 81,
+  "session_count": 82,
   "start_date": "2026-09-22",
   "current_day": 11,
   "current_phase": 2,
@@ -28,10 +28,19 @@
     "os_disk_001",
     "ga_analytical_001",
     "ds_stack_001",
-    "em_prob_001"
+    "em_prob_001",
+    "dm_graph_001",
+    "dm_comb_001",
+    "ga_verbal_001",
+    "ga_verbal_002",
+    "db_btree_001",
+    "algo_rec_001",
+    "algo_dp_001",
+    "db_norm_001",
+    "toc_undec_001",
+    "toc_cfl_001"
   ],
   "session_themes": [
-    "Computer Networks — Network Layer & IP Addressing",
     "Algorithms — Dynamic Programming",
     "Compiler Design — Lexical Analysis",
     "Operating Systems — Memory Management & Virtual Memory",
@@ -80,10 +89,11 @@
     "Computer Organization & Architecture — I/O Interface",
     "Programming & Data Structures — Programming in C",
     "Operating Systems — Deadlocks",
-    "Computer Organization & Architecture — Memory Hierarchy"
+    "Computer Organization & Architecture — Memory Hierarchy",
+    "Discrete Mathematics — Graph Theory"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
