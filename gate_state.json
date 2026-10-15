@@ -1,5 +1,5 @@
 {
-  "session_count": 80,
+  "session_count": 81,
   "start_date": "2026-09-22",
   "current_day": 11,
   "current_phase": 2,
@@ -18,10 +18,19 @@
     "ga_spatial_002",
     "pyq_gate2021_dsa_01",
     "toc_dfa_001",
-    "db_serial_001"
+    "db_serial_001",
+    "coa_cache_001",
+    "coa_hazard_001",
+    "coa_pipe_001",
+    "ga_quant_003",
+    "ga_quant_001",
+    "pyq_gate2022_os_01",
+    "os_disk_001",
+    "ga_analytical_001",
+    "ds_stack_001",
+    "em_prob_001"
   ],
   "session_themes": [
-    "Programming & Data Structures — Linear Data Structures",
     "Computer Networks — Network Layer & IP Addressing",
     "Algorithms — Dynamic Programming",
     "Compiler Design — Lexical Analysis",
@@ -70,10 +79,11 @@
     "Operating Systems — Deadlocks",
     "Computer Organization & Architecture — I/O Interface",
     "Programming & Data Structures — Programming in C",
-    "Operating Systems — Deadlocks"
+    "Operating Systems — Deadlocks",
+    "Computer Organization & Architecture — Memory Hierarchy"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
