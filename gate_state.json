@@ -1,5 +1,5 @@
 {
-  "session_count": 85,
+  "session_count": 86,
   "start_date": "2026-09-22",
   "current_day": 11,
   "current_phase": 2,
@@ -32,10 +32,19 @@
     "ds_c_ptr_001",
     "db_norm_001",
     "ds_bst_001",
-    "toc_undec_001"
+    "toc_undec_001",
+    "ds_stack_001",
+    "ga_verbal_001",
+    "ga_verbal_002",
+    "coa_cache_001",
+    "algo_rec_001",
+    "algo_dp_001",
+    "dl_float_001",
+    "os_disk_001",
+    "toc_dfa_001",
+    "db_btree_001"
   ],
   "session_themes": [
-    "Databases (DBMS) — SQL Querying",
     "Digital Logic — Boolean Algebra & Minimization",
     "Theory of Computation — Context-Free Languages & Pushdown Automata",
     "Computer Organization & Architecture — Machine Instructions & Addressing",
@@ -84,10 +93,11 @@
     "Discrete Mathematics — Graph Theory",
     "Programming & Data Structures — Programming in C",
     "Operating Systems — Processes & Threads",
-    "Discrete Mathematics — Combinatorics"
+    "Discrete Mathematics — Combinatorics",
+    "Programming & Data Structures — Non-Linear Data Structures"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
