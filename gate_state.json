@@ -1,7 +1,7 @@
 {
-  "session_count": 87,
+  "session_count": 88,
   "start_date": "2026-09-22",
-  "current_day": 11,
+  "current_day": 12,
   "current_phase": 2,
   "phase_name": "Phase 2: High-Weightage Subject Deep Dive",
   "sent_ids": [
@@ -16,10 +16,19 @@
     "em_prob_001",
     "cn_csmacd_001",
     "ga_spatial_001",
-    "os_disk_001"
+    "os_disk_001",
+    "os_deadlock_001",
+    "os_proc_001",
+    "os_sched_001",
+    "os_synch_001",
+    "os_mem_001",
+    "ga_spatial_002",
+    "pyq_gate2021_dsa_01",
+    "ds_c_ptr_001",
+    "ga_quant_003",
+    "algo_rec_001"
   ],
   "session_themes": [
-    "Theory of Computation — Context-Free Languages & Pushdown Automata",
     "Computer Organization & Architecture — Machine Instructions & Addressing",
     "Compiler Design — Syntax-Directed Translation (SDT)",
     "Discrete Mathematics — Combinatorics",
@@ -68,10 +77,11 @@
     "Operating Systems — Processes & Threads",
     "Discrete Mathematics — Combinatorics",
     "Programming & Data Structures — Non-Linear Data Structures",
-    "Computer Organization & Architecture — Machine Instructions & Addressing"
+    "Computer Organization & Architecture — Machine Instructions & Addressing",
+    "Operating Systems — Deadlocks"
   ],
   "topic_history": {},
-  "ga_rotation_index": 3,
+  "ga_rotation_index": 4,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
