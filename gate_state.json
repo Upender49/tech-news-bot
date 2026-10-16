@@ -1,5 +1,5 @@
 {
-  "session_count": 88,
+  "session_count": 89,
   "start_date": "2026-09-22",
   "current_day": 12,
   "current_phase": 2,
@@ -26,10 +26,19 @@
     "pyq_gate2021_dsa_01",
     "ds_c_ptr_001",
     "ga_quant_003",
-    "algo_rec_001"
+    "algo_rec_001",
+    "dm_logic_001",
+    "dm_graph_001",
+    "dm_comb_001",
+    "ga_quant_001",
+    "ga_quant_002",
+    "cn_subnet_001",
+    "toc_undec_001",
+    "ds_bst_001",
+    "cd_lr_001",
+    "ga_verbal_002"
   ],
   "session_themes": [
-    "Computer Organization & Architecture — Machine Instructions & Addressing",
     "Compiler Design — Syntax-Directed Translation (SDT)",
     "Discrete Mathematics — Combinatorics",
     "Computer Networks — Layering & Physical Layer",
@@ -78,10 +87,11 @@
     "Discrete Mathematics — Combinatorics",
     "Programming & Data Structures — Non-Linear Data Structures",
     "Computer Organization & Architecture — Machine Instructions & Addressing",
-    "Operating Systems — Deadlocks"
+    "Operating Systems — Deadlocks",
+    "Discrete Mathematics — Mathematical Logic"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
