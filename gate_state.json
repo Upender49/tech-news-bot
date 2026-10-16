@@ -1,5 +1,5 @@
 {
-  "session_count": 84,
+  "session_count": 85,
   "start_date": "2026-09-22",
   "current_day": 11,
   "current_phase": 2,
@@ -22,10 +22,19 @@
     "ga_spatial_002",
     "pyq_gate2021_dsa_01",
     "coa_pipe_001",
-    "ga_quant_003"
+    "ga_quant_003",
+    "dm_comb_001",
+    "dm_logic_001",
+    "dm_graph_001",
+    "ga_quant_002",
+    "ga_quant_001",
+    "pyq_gate2022_os_01",
+    "ds_c_ptr_001",
+    "db_norm_001",
+    "ds_bst_001",
+    "toc_undec_001"
   ],
   "session_themes": [
-    "Operating Systems — Memory Management & Virtual Memory",
     "Databases (DBMS) — SQL Querying",
     "Digital Logic — Boolean Algebra & Minimization",
     "Theory of Computation — Context-Free Languages & Pushdown Automata",
@@ -74,10 +83,11 @@
     "Computer Organization & Architecture — Memory Hierarchy",
     "Discrete Mathematics — Graph Theory",
     "Programming & Data Structures — Programming in C",
-    "Operating Systems — Processes & Threads"
+    "Operating Systems — Processes & Threads",
+    "Discrete Mathematics — Combinatorics"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
