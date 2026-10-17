@@ -1,5 +1,5 @@
 {
-  "session_count": 92,
+  "session_count": 93,
   "start_date": "2026-09-22",
   "current_day": 12,
   "current_phase": 2,
@@ -30,10 +30,19 @@
     "db_btree_001",
     "os_sched_001",
     "ds_c_ptr_001",
-    "ga_quant_002"
+    "ga_quant_002",
+    "ds_bst_001",
+    "ga_quant_003",
+    "ga_quant_001",
+    "toc_undec_001",
+    "coa_hazard_001",
+    "em_prob_001",
+    "algo_mst_001",
+    "coa_cache_001",
+    "ga_verbal_002",
+    "db_norm_001"
   ],
   "session_themes": [
-    "Operating Systems — Deadlocks",
     "Algorithms — Graph Algorithms",
     "Engineering Mathematics — Calculus",
     "Programming & Data Structures — Linear Data Structures",
@@ -82,10 +91,11 @@
     "Discrete Mathematics — Mathematical Logic",
     "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
     "Operating Systems — Concurrency & Synchronization",
-    "Discrete Mathematics — Set Theory & Algebra"
+    "Discrete Mathematics — Set Theory & Algebra",
+    "Programming & Data Structures — Linear Data Structures"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
