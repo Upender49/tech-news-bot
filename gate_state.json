@@ -1,5 +1,5 @@
 {
-  "session_count": 89,
+  "session_count": 90,
   "start_date": "2026-09-22",
   "current_day": 12,
   "current_phase": 2,
@@ -36,10 +36,19 @@
     "toc_undec_001",
     "ds_bst_001",
     "cd_lr_001",
-    "ga_verbal_002"
+    "ga_verbal_002",
+    "ga_verbal_001",
+    "db_serial_001",
+    "algo_dp_001",
+    "cd_parse_001",
+    "dl_kmap_001",
+    "ds_stack_001",
+    "ds_tree_001",
+    "toc_cfl_001",
+    "em_la_001",
+    "cn_tcp_001"
   ],
   "session_themes": [
-    "Compiler Design — Syntax-Directed Translation (SDT)",
     "Discrete Mathematics — Combinatorics",
     "Computer Networks — Layering & Physical Layer",
     "Operating Systems — Deadlocks",
@@ -88,10 +97,11 @@
     "Programming & Data Structures — Non-Linear Data Structures",
     "Computer Organization & Architecture — Machine Instructions & Addressing",
     "Operating Systems — Deadlocks",
-    "Discrete Mathematics — Mathematical Logic"
+    "Discrete Mathematics — Mathematical Logic",
+    "Computer Organization & Architecture — ALU, Data-Path & Control Unit"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
