@@ -1,5 +1,5 @@
 {
-  "session_count": 93,
+  "session_count": 94,
   "start_date": "2026-09-22",
   "current_day": 12,
   "current_phase": 2,
@@ -40,10 +40,19 @@
     "algo_mst_001",
     "coa_cache_001",
     "ga_verbal_002",
-    "db_norm_001"
+    "db_norm_001",
+    "os_mem_001",
+    "ga_quant_002",
+    "ga_spatial_001",
+    "db_serial_001",
+    "algo_rec_001",
+    "cd_lr_001",
+    "dl_float_001",
+    "algo_dp_001",
+    "toc_dfa_001",
+    "cd_parse_001"
   ],
   "session_themes": [
-    "Algorithms — Graph Algorithms",
     "Engineering Mathematics — Calculus",
     "Programming & Data Structures — Linear Data Structures",
     "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
@@ -92,10 +101,11 @@
     "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
     "Operating Systems — Concurrency & Synchronization",
     "Discrete Mathematics — Set Theory & Algebra",
-    "Programming & Data Structures — Linear Data Structures"
+    "Programming & Data Structures — Linear Data Structures",
+    "Operating Systems — CPU Scheduling"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
