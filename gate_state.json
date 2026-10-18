@@ -1,7 +1,7 @@
 {
-  "session_count": 95,
+  "session_count": 96,
   "start_date": "2026-09-22",
-  "current_day": 12,
+  "current_day": 13,
   "current_phase": 2,
   "phase_name": "Phase 2: High-Weightage Subject Deep Dive",
   "sent_ids": [
@@ -24,10 +24,19 @@
     "ga_quant_001",
     "toc_undec_001",
     "os_deadlock_001",
-    "os_disk_001"
+    "os_disk_001",
+    "ds_bst_001",
+    "ds_tree_001",
+    "ds_stack_001",
+    "ds_c_ptr_001",
+    "ga_spatial_002",
+    "pyq_gate2022_os_01",
+    "em_prob_001",
+    "dl_kmap_001",
+    "os_sched_001",
+    "dm_graph_001"
   ],
   "session_themes": [
-    "Programming & Data Structures — Linear Data Structures",
     "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
     "Operating Systems — File Systems & Disk Scheduling",
     "Programming & Data Structures — Programming in C",
@@ -76,10 +85,11 @@
     "Discrete Mathematics — Set Theory & Algebra",
     "Programming & Data Structures — Linear Data Structures",
     "Operating Systems — CPU Scheduling",
-    "Computer Organization & Architecture — Memory Hierarchy"
+    "Computer Organization & Architecture — Memory Hierarchy",
+    "Programming & Data Structures — Non-Linear Data Structures"
   ],
   "topic_history": {},
-  "ga_rotation_index": 3,
+  "ga_rotation_index": 4,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
