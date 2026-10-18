@@ -1,5 +1,5 @@
 {
-  "session_count": 96,
+  "session_count": 97,
   "start_date": "2026-09-22",
   "current_day": 13,
   "current_phase": 2,
@@ -34,10 +34,19 @@
     "em_prob_001",
     "dl_kmap_001",
     "os_sched_001",
-    "dm_graph_001"
+    "dm_graph_001",
+    "dm_comb_001",
+    "dm_logic_001",
+    "ga_quant_003",
+    "cn_tcp_001",
+    "cn_subnet_001",
+    "algo_mst_001",
+    "os_proc_001",
+    "db_btree_001",
+    "os_mem_002",
+    "db_norm_001"
   ],
   "session_themes": [
-    "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
     "Operating Systems — File Systems & Disk Scheduling",
     "Programming & Data Structures — Programming in C",
     "Databases (DBMS) — Normalization & Functional Dependencies",
@@ -86,10 +95,11 @@
     "Programming & Data Structures — Linear Data Structures",
     "Operating Systems — CPU Scheduling",
     "Computer Organization & Architecture — Memory Hierarchy",
-    "Programming & Data Structures — Non-Linear Data Structures"
+    "Programming & Data Structures — Non-Linear Data Structures",
+    "Discrete Mathematics — Combinatorics"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
