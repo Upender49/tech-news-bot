@@ -1,5 +1,5 @@
 {
-  "session_count": 100,
+  "session_count": 101,
   "start_date": "2026-09-22",
   "current_day": 13,
   "current_phase": 2,
@@ -38,10 +38,19 @@
     "ga_quant_002",
     "cd_parse_001",
     "cn_subnet_001",
-    "dm_logic_001"
+    "dm_logic_001",
+    "dm_comb_001",
+    "dm_graph_001",
+    "ga_quant_001",
+    "algo_mst_001",
+    "toc_undec_001",
+    "dl_kmap_001",
+    "os_deadlock_001",
+    "cd_lr_001",
+    "cn_tcp_001",
+    "toc_cfl_001"
   ],
   "session_themes": [
-    "Operating Systems — CPU Scheduling",
     "Programming & Data Structures — Non-Linear Data Structures",
     "Digital Logic — Sequential Circuits",
     "Operating Systems — Concurrency & Synchronization",
@@ -90,10 +99,11 @@
     "Discrete Mathematics — Combinatorics",
     "Operating Systems — CPU Scheduling",
     "Programming & Data Structures — Linear Data Structures",
-    "Computer Organization & Architecture — I/O Interface"
+    "Computer Organization & Architecture — I/O Interface",
+    "Discrete Mathematics — Mathematical Logic"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
