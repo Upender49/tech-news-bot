@@ -1,5 +1,5 @@
 {
-  "session_count": 105,
+  "session_count": 106,
   "start_date": "2026-09-22",
   "current_day": 14,
   "current_phase": 2,
@@ -16,10 +16,19 @@
     "ga_quant_003",
     "pyq_gate2021_dsa_01",
     "algo_rec_001",
-    "toc_dfa_001"
+    "toc_dfa_001",
+    "ds_c_ptr_001",
+    "ds_stack_001",
+    "ds_bst_001",
+    "ds_tree_001",
+    "ga_verbal_002",
+    "ga_verbal_001",
+    "pyq_gate2022_os_01",
+    "cd_lr_001",
+    "db_btree_001",
+    "ga_quant_001"
   ],
   "session_themes": [
-    "Compiler Design — Intermediate Code & Optimization",
     "Operating Systems — Memory Management & Virtual Memory",
     "Programming & Data Structures — Non-Linear Data Structures",
     "Discrete Mathematics — Combinatorics",
@@ -68,10 +77,11 @@
     "Programming & Data Structures — Programming in C",
     "Computer Organization & Architecture — Memory Hierarchy",
     "Discrete Mathematics — Graph Theory",
-    "Operating Systems — CPU Scheduling"
+    "Operating Systems — CPU Scheduling",
+    "Programming & Data Structures — Programming in C"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
