@@ -1,5 +1,5 @@
 {
-  "session_count": 110,
+  "session_count": 111,
   "start_date": "2026-09-22",
   "current_day": 14,
   "current_phase": 2,
@@ -30,10 +30,19 @@
     "ga_spatial_001",
     "ds_bst_001",
     "ga_analytical_001",
-    "em_la_001"
+    "em_la_001",
+    "dm_logic_001",
+    "dm_graph_001",
+    "ga_analytical_002",
+    "cd_lr_001",
+    "cn_tcp_001",
+    "os_proc_001",
+    "cn_csmacd_001",
+    "dl_float_001",
+    "ga_spatial_002",
+    "em_prob_001"
   ],
   "session_themes": [
-    "Programming & Data Structures — Non-Linear Data Structures",
     "Discrete Mathematics — Graph Theory",
     "Operating Systems — Deadlocks",
     "Computer Organization & Architecture — I/O Interface",
@@ -82,10 +91,11 @@
     "Computer Organization & Architecture — I/O Interface",
     "Discrete Mathematics — Graph Theory",
     "Operating Systems — CPU Scheduling",
-    "Computer Organization & Architecture — Memory Hierarchy"
+    "Computer Organization & Architecture — Memory Hierarchy",
+    "Discrete Mathematics — Combinatorics"
   ],
   "topic_history": {},
-  "ga_rotation_index": 2,
+  "ga_rotation_index": 3,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
