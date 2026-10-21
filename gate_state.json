@@ -1,5 +1,5 @@
 {
-  "session_count": 109,
+  "session_count": 110,
   "start_date": "2026-09-22",
   "current_day": 14,
   "current_phase": 2,
@@ -20,10 +20,19 @@
     "ga_quant_003",
     "pyq_gate2022_os_01",
     "dm_comb_001",
-    "ga_quant_002"
+    "ga_quant_002",
+    "coa_cache_001",
+    "coa_hazard_001",
+    "coa_pipe_001",
+    "ga_verbal_001",
+    "ga_verbal_002",
+    "pyq_gate2021_dsa_01",
+    "ga_spatial_001",
+    "ds_bst_001",
+    "ga_analytical_001",
+    "em_la_001"
   ],
   "session_themes": [
-    "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
     "Programming & Data Structures — Non-Linear Data Structures",
     "Discrete Mathematics — Graph Theory",
     "Operating Systems — Deadlocks",
@@ -72,10 +81,11 @@
     "Programming & Data Structures — Programming in C",
     "Computer Organization & Architecture — I/O Interface",
     "Discrete Mathematics — Graph Theory",
-    "Operating Systems — CPU Scheduling"
+    "Operating Systems — CPU Scheduling",
+    "Computer Organization & Architecture — Memory Hierarchy"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
