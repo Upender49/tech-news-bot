@@ -1,5 +1,5 @@
 {
-  "session_count": 120,
+  "session_count": 121,
   "start_date": "2026-09-22",
   "current_day": 16,
   "current_phase": 2,
@@ -22,10 +22,19 @@
     "ga_spatial_001",
     "pyq_gate2021_dsa_01",
     "cd_lr_001",
-    "ga_quant_002"
+    "ga_quant_002",
+    "dm_logic_001",
+    "dm_comb_001",
+    "dm_graph_001",
+    "ga_quant_001",
+    "cd_parse_001",
+    "os_sched_001",
+    "ga_verbal_001",
+    "algo_rec_001",
+    "coa_cache_001",
+    "ds_stack_001"
   ],
   "session_themes": [
-    "Discrete Mathematics — Graph Theory",
     "Computer Organization & Architecture — Machine Instructions & Addressing",
     "Programming & Data Structures — Non-Linear Data Structures",
     "Operating Systems — Concurrency & Synchronization",
@@ -74,10 +83,11 @@
     "Operating Systems — File Systems & Disk Scheduling",
     "Discrete Mathematics — Set Theory & Algebra",
     "Computer Organization & Architecture — Memory Hierarchy",
-    "Operating Systems — Memory Management & Virtual Memory"
+    "Operating Systems — Memory Management & Virtual Memory",
+    "Discrete Mathematics — Mathematical Logic"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
