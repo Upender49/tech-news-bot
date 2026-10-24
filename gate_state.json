@@ -1,5 +1,5 @@
 {
-  "session_count": 121,
+  "session_count": 122,
   "start_date": "2026-09-22",
   "current_day": 16,
   "current_phase": 2,
@@ -32,10 +32,19 @@
     "ga_verbal_001",
     "algo_rec_001",
     "coa_cache_001",
-    "ds_stack_001"
+    "ds_stack_001",
+    "coa_pipe_001",
+    "coa_hazard_001",
+    "ga_verbal_002",
+    "ga_analytical_001",
+    "toc_cfl_001",
+    "toc_dfa_001",
+    "db_serial_001",
+    "ds_tree_001",
+    "dl_float_001",
+    "em_la_001"
   ],
   "session_themes": [
-    "Computer Organization & Architecture — Machine Instructions & Addressing",
     "Programming & Data Structures — Non-Linear Data Structures",
     "Operating Systems — Concurrency & Synchronization",
     "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
@@ -84,10 +93,11 @@
     "Discrete Mathematics — Set Theory & Algebra",
     "Computer Organization & Architecture — Memory Hierarchy",
     "Operating Systems — Memory Management & Virtual Memory",
-    "Discrete Mathematics — Mathematical Logic"
+    "Discrete Mathematics — Mathematical Logic",
+    "Computer Organization & Architecture — Machine Instructions & Addressing"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
