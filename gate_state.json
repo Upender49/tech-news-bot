@@ -1,5 +1,5 @@
 {
-  "session_count": 128,
+  "session_count": 129,
   "start_date": "2026-09-22",
   "current_day": 17,
   "current_phase": 2,
@@ -30,10 +30,19 @@
     "coa_hazard_001",
     "ga_quant_002",
     "ga_quant_003",
-    "cn_csmacd_001"
+    "cn_csmacd_001",
+    "ds_bst_001",
+    "ds_tree_001",
+    "ds_c_ptr_001",
+    "ds_stack_001",
+    "ga_verbal_002",
+    "ga_verbal_001",
+    "em_prob_001",
+    "os_synch_001",
+    "cn_tcp_001",
+    "db_serial_001"
   ],
   "session_themes": [
-    "Programming & Data Structures — Programming in C",
     "Operating Systems — Deadlocks",
     "Computer Organization & Architecture — Memory Hierarchy",
     "Discrete Mathematics — Graph Theory",
@@ -82,10 +91,11 @@
     "Operating Systems — File Systems & Disk Scheduling",
     "Programming & Data Structures — Programming in C",
     "Discrete Mathematics — Graph Theory",
-    "Operating Systems — CPU Scheduling"
+    "Operating Systems — CPU Scheduling",
+    "Programming & Data Structures — Non-Linear Data Structures"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
