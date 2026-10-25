@@ -1,5 +1,5 @@
 {
-  "session_count": 124,
+  "session_count": 125,
   "start_date": "2026-09-22",
   "current_day": 16,
   "current_phase": 2,
@@ -26,10 +26,19 @@
     "toc_cfl_001",
     "cn_csmacd_001",
     "ga_verbal_002",
-    "ga_quant_002"
+    "ga_quant_002",
+    "os_disk_001",
+    "os_synch_001",
+    "os_sched_001",
+    "os_mem_002",
+    "os_proc_001",
+    "ga_quant_003",
+    "ga_quant_001",
+    "db_serial_001",
+    "algo_mst_001",
+    "cd_lr_001"
   ],
   "session_themes": [
-    "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
     "Discrete Mathematics — Combinatorics",
     "Operating Systems — Deadlocks",
     "Computer Organization & Architecture — I/O Interface",
@@ -78,10 +87,11 @@
     "Discrete Mathematics — Mathematical Logic",
     "Computer Organization & Architecture — Machine Instructions & Addressing",
     "Programming & Data Structures — Non-Linear Data Structures",
-    "Discrete Mathematics — Graph Theory"
+    "Discrete Mathematics — Graph Theory",
+    "Operating Systems — File Systems & Disk Scheduling"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
