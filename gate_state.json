@@ -1,5 +1,5 @@
 {
-  "session_count": 134,
+  "session_count": 135,
   "start_date": "2026-09-22",
   "current_day": 17,
   "current_phase": 2,
@@ -18,10 +18,19 @@
     "pyq_gate2022_os_01",
     "algo_dp_001",
     "ga_quant_002",
-    "ga_analytical_002"
+    "ga_analytical_002",
+    "dm_logic_001",
+    "dm_graph_001",
+    "dm_comb_001",
+    "ga_analytical_001",
+    "cn_csmacd_001",
+    "toc_cfl_001",
+    "os_sched_001",
+    "coa_pipe_001",
+    "ga_quant_003",
+    "dl_float_001"
   ],
   "session_themes": [
-    "Discrete Mathematics — Combinatorics",
     "Programming & Data Structures — Non-Linear Data Structures",
     "Computer Organization & Architecture — Machine Instructions & Addressing",
     "Operating Systems — Deadlocks",
@@ -70,10 +79,11 @@
     "Discrete Mathematics — Mathematical Logic",
     "Operating Systems — Deadlocks",
     "Computer Organization & Architecture — Machine Instructions & Addressing",
-    "Programming & Data Structures — Programming in C"
+    "Programming & Data Structures — Programming in C",
+    "Discrete Mathematics — Mathematical Logic"
   ],
   "topic_history": {},
-  "ga_rotation_index": 2,
+  "ga_rotation_index": 3,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
