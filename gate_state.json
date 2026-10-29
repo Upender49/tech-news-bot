@@ -1,5 +1,5 @@
 {
-  "session_count": 141,
+  "session_count": 142,
   "start_date": "2026-09-22",
   "current_day": 18,
   "current_phase": 2,
@@ -16,10 +16,19 @@
     "ga_quant_001",
     "pyq_gate2022_os_01",
     "toc_undec_001",
-    "ga_spatial_001"
+    "ga_spatial_001",
+    "os_sched_001",
+    "os_proc_001",
+    "os_deadlock_001",
+    "os_mem_002",
+    "os_disk_001",
+    "ga_verbal_002",
+    "ga_verbal_001",
+    "dl_float_001",
+    "ga_analytical_001",
+    "dl_kmap_001"
   ],
   "session_themes": [
-    "Discrete Mathematics — Set Theory & Algebra",
     "Programming & Data Structures — Linear Data Structures",
     "Operating Systems — CPU Scheduling",
     "Computer Organization & Architecture — Memory Hierarchy",
@@ -68,10 +77,11 @@
     "Operating Systems — CPU Scheduling",
     "Computer Organization & Architecture — Machine Instructions & Addressing",
     "Discrete Mathematics — Graph Theory",
-    "Programming & Data Structures — Programming in C"
+    "Programming & Data Structures — Programming in C",
+    "Operating Systems — CPU Scheduling"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
