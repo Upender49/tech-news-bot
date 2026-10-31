@@ -1,5 +1,5 @@
 {
-  "session_count": 149,
+  "session_count": 150,
   "start_date": "2026-09-22",
   "current_day": 19,
   "current_phase": 2,
@@ -24,10 +24,19 @@
     "em_la_001",
     "dm_logic_001",
     "dm_comb_001",
-    "os_mem_001"
+    "os_mem_001",
+    "dm_graph_001",
+    "ga_verbal_001",
+    "ga_verbal_002",
+    "pyq_gate2022_os_01",
+    "ga_analytical_001",
+    "ga_quant_002",
+    "ds_tree_001",
+    "os_proc_001",
+    "toc_dfa_001",
+    "em_prob_001"
   ],
   "session_themes": [
-    "Computer Organization & Architecture — I/O Interface",
     "Discrete Mathematics — Mathematical Logic",
     "Programming & Data Structures — Programming in C",
     "Computer Organization & Architecture — Memory Hierarchy",
@@ -76,10 +85,11 @@
     "Programming & Data Structures — Programming in C",
     "Discrete Mathematics — Combinatorics",
     "Operating Systems — File Systems & Disk Scheduling",
-    "Computer Organization & Architecture — Machine Instructions & Addressing"
+    "Computer Organization & Architecture — Machine Instructions & Addressing",
+    "Discrete Mathematics — Mathematical Logic"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
