@@ -1,5 +1,5 @@
 {
-  "session_count": 146,
+  "session_count": 147,
   "start_date": "2026-09-22",
   "current_day": 19,
   "current_phase": 2,
@@ -30,10 +30,19 @@
     "coa_cache_001",
     "ga_analytical_002",
     "toc_dfa_001",
-    "coa_pipe_001"
+    "coa_pipe_001",
+    "dm_comb_001",
+    "dm_graph_001",
+    "dm_logic_001",
+    "ga_analytical_001",
+    "cd_lr_001",
+    "os_proc_001",
+    "algo_dp_001",
+    "db_btree_001",
+    "ga_quant_001",
+    "os_sched_001"
   ],
   "session_themes": [
-    "Discrete Mathematics — Combinatorics",
     "Operating Systems — CPU Scheduling",
     "Programming & Data Structures — Linear Data Structures",
     "Computer Organization & Architecture — I/O Interface",
@@ -82,10 +91,11 @@
     "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
     "Discrete Mathematics — Set Theory & Algebra",
     "Operating Systems — Concurrency & Synchronization",
-    "Programming & Data Structures — Programming in C"
+    "Programming & Data Structures — Programming in C",
+    "Discrete Mathematics — Combinatorics"
   ],
   "topic_history": {},
-  "ga_rotation_index": 2,
+  "ga_rotation_index": 3,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
