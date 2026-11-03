@@ -1,5 +1,5 @@
 {
-  "session_count": 157,
+  "session_count": 158,
   "start_date": "2026-09-22",
   "current_day": 20,
   "current_phase": 2,
@@ -32,10 +32,19 @@
     "toc_cfl_001",
     "ga_verbal_001",
     "ga_verbal_002",
-    "cn_tcp_001"
+    "cn_tcp_001",
+    "os_disk_001",
+    "os_deadlock_001",
+    "os_sched_001",
+    "os_mem_001",
+    "ga_quant_001",
+    "ga_quant_003",
+    "cn_csmacd_001",
+    "algo_rec_001",
+    "coa_hazard_001",
+    "cn_subnet_001"
   ],
   "session_themes": [
-    "Discrete Mathematics — Graph Theory",
     "Operating Systems — CPU Scheduling",
     "Computer Organization & Architecture — Memory Hierarchy",
     "Discrete Mathematics — Combinatorics",
@@ -84,10 +93,11 @@
     "Discrete Mathematics — Combinatorics",
     "Operating Systems — CPU Scheduling",
     "Programming & Data Structures — Programming in C",
-    "Discrete Mathematics — Mathematical Logic"
+    "Discrete Mathematics — Mathematical Logic",
+    "Operating Systems — File Systems & Disk Scheduling"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
