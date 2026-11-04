@@ -1,5 +1,5 @@
 {
-  "session_count": 161,
+  "session_count": 162,
   "start_date": "2026-09-22",
   "current_day": 21,
   "current_phase": 2,
@@ -36,10 +36,19 @@
     "ga_quant_003",
     "dm_graph_001",
     "os_mem_002",
-    "os_sched_001"
+    "os_sched_001",
+    "dm_logic_001",
+    "dm_comb_001",
+    "ga_analytical_001",
+    "ga_analytical_002",
+    "em_la_001",
+    "db_serial_001",
+    "algo_mst_001",
+    "cd_parse_001",
+    "cd_lr_001",
+    "toc_cfl_001"
   ],
   "session_themes": [
-    "Programming & Data Structures — Linear Data Structures",
     "Computer Organization & Architecture — Memory Hierarchy",
     "Operating Systems — Memory Management & Virtual Memory",
     "Discrete Mathematics — Graph Theory",
@@ -88,10 +97,11 @@
     "Operating Systems — File Systems & Disk Scheduling",
     "Computer Organization & Architecture — I/O Interface",
     "Programming & Data Structures — Non-Linear Data Structures",
-    "Operating Systems — File Systems & Disk Scheduling"
+    "Operating Systems — File Systems & Disk Scheduling",
+    "Discrete Mathematics — Graph Theory"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
