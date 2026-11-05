@@ -1,5 +1,5 @@
 {
-  "session_count": 164,
+  "session_count": 165,
   "start_date": "2026-09-22",
   "current_day": 21,
   "current_phase": 2,
@@ -30,10 +30,19 @@
     "ga_spatial_002",
     "ga_quant_001",
     "coa_hazard_001",
-    "algo_rec_001"
+    "algo_rec_001",
+    "coa_cache_001",
+    "coa_pipe_001",
+    "ga_quant_003",
+    "dl_float_001",
+    "algo_dp_001",
+    "db_btree_001",
+    "os_disk_001",
+    "dm_logic_001",
+    "dm_graph_001",
+    "dm_comb_001"
   ],
   "session_themes": [
-    "Discrete Mathematics — Graph Theory",
     "Programming & Data Structures — Linear Data Structures",
     "Operating Systems — File Systems & Disk Scheduling",
     "Discrete Mathematics — Set Theory & Algebra",
@@ -82,10 +91,11 @@
     "Operating Systems — File Systems & Disk Scheduling",
     "Discrete Mathematics — Graph Theory",
     "Programming & Data Structures — Programming in C",
-    "Operating Systems — Deadlocks"
+    "Operating Systems — Deadlocks",
+    "Computer Organization & Architecture — Memory Hierarchy"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
