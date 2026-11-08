@@ -1,5 +1,5 @@
 {
-  "session_count": 172,
+  "session_count": 173,
   "start_date": "2026-09-22",
   "current_day": 22,
   "current_phase": 2,
@@ -38,10 +38,19 @@
     "dl_kmap_001",
     "cd_parse_001",
     "db_norm_001",
-    "dm_graph_001"
+    "dm_graph_001",
+    "os_mem_001",
+    "ga_quant_002",
+    "cn_csmacd_001",
+    "cn_tcp_001",
+    "dm_logic_001",
+    "dl_float_001",
+    "toc_cfl_001",
+    "em_la_001",
+    "em_prob_001",
+    "algo_rec_001"
   ],
   "session_themes": [
-    "Programming & Data Structures — Non-Linear Data Structures",
     "Discrete Mathematics — Graph Theory",
     "Operating Systems — File Systems & Disk Scheduling",
     "Programming & Data Structures — Programming in C",
@@ -90,10 +99,11 @@
     "Discrete Mathematics — Combinatorics",
     "Operating Systems — CPU Scheduling",
     "Computer Organization & Architecture — Machine Instructions & Addressing",
-    "Programming & Data Structures — Programming in C"
+    "Programming & Data Structures — Programming in C",
+    "Operating Systems — CPU Scheduling"
   ],
   "topic_history": {},
-  "ga_rotation_index": 4,
+  "ga_rotation_index": 1,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
