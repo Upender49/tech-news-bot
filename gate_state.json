@@ -1,5 +1,5 @@
 {
-  "session_count": 178,
+  "session_count": 179,
   "start_date": "2026-09-22",
   "current_day": 23,
   "current_phase": 2,
@@ -26,10 +26,19 @@
     "ga_analytical_001",
     "os_proc_001",
     "db_norm_001",
-    "cn_tcp_001"
+    "cn_tcp_001",
+    "os_mem_001",
+    "os_deadlock_001",
+    "os_disk_001",
+    "os_sched_001",
+    "os_synch_001",
+    "ga_spatial_001",
+    "ga_spatial_002",
+    "algo_rec_001",
+    "algo_mst_001",
+    "dl_kmap_001"
   ],
   "session_themes": [
-    "Programming & Data Structures — Non-Linear Data Structures",
     "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
     "Discrete Mathematics — Mathematical Logic",
     "Operating Systems — Deadlocks",
@@ -78,10 +87,11 @@
     "Computer Organization & Architecture — Instruction Pipelining",
     "Operating Systems — Concurrency & Synchronization",
     "Programming & Data Structures — Programming in C",
-    "Discrete Mathematics — Set Theory & Algebra"
+    "Discrete Mathematics — Set Theory & Algebra",
+    "Operating Systems — Processes & Threads"
   ],
   "topic_history": {},
-  "ga_rotation_index": 2,
+  "ga_rotation_index": 3,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
