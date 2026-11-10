@@ -1,5 +1,5 @@
 {
-  "session_count": 177,
+  "session_count": 178,
   "start_date": "2026-09-22",
   "current_day": 23,
   "current_phase": 2,
@@ -16,10 +16,19 @@
     "ga_quant_002",
     "pyq_gate2022_os_01",
     "coa_hazard_001",
-    "ga_analytical_002"
+    "ga_analytical_002",
+    "dm_graph_001",
+    "dm_comb_001",
+    "dm_logic_001",
+    "ga_verbal_001",
+    "ga_verbal_002",
+    "os_mem_002",
+    "ga_analytical_001",
+    "os_proc_001",
+    "db_norm_001",
+    "cn_tcp_001"
   ],
   "session_themes": [
-    "Operating Systems — CPU Scheduling",
     "Programming & Data Structures — Non-Linear Data Structures",
     "Computer Organization & Architecture — ALU, Data-Path & Control Unit",
     "Discrete Mathematics — Mathematical Logic",
@@ -68,10 +77,11 @@
     "Discrete Mathematics — Combinatorics",
     "Computer Organization & Architecture — Instruction Pipelining",
     "Operating Systems — Concurrency & Synchronization",
-    "Programming & Data Structures — Programming in C"
+    "Programming & Data Structures — Programming in C",
+    "Discrete Mathematics — Set Theory & Algebra"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
