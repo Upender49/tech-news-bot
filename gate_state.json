@@ -1,5 +1,5 @@
 {
-  "session_count": 181,
+  "session_count": 182,
   "start_date": "2026-09-22",
   "current_day": 23,
   "current_phase": 2,
@@ -20,10 +20,19 @@
     "ga_analytical_002",
     "ga_quant_001",
     "ds_stack_001",
-    "dl_kmap_001"
+    "dl_kmap_001",
+    "ds_c_ptr_001",
+    "ds_bst_001",
+    "ds_tree_001",
+    "ga_verbal_002",
+    "ga_verbal_001",
+    "pyq_gate2022_os_01",
+    "os_mem_001",
+    "algo_rec_001",
+    "db_norm_001",
+    "ga_spatial_001"
   ],
   "session_themes": [
-    "Operating Systems — Deadlocks",
     "Computer Organization & Architecture — Machine Instructions & Addressing",
     "Programming & Data Structures — Programming in C",
     "Discrete Mathematics — Mathematical Logic",
@@ -72,10 +81,11 @@
     "Discrete Mathematics — Set Theory & Algebra",
     "Operating Systems — Processes & Threads",
     "Computer Organization & Architecture — Memory Hierarchy",
-    "Discrete Mathematics — Graph Theory"
+    "Discrete Mathematics — Graph Theory",
+    "Programming & Data Structures — Programming in C"
   ],
   "topic_history": {},
-  "ga_rotation_index": 1,
+  "ga_rotation_index": 2,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
