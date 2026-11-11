@@ -1,5 +1,5 @@
 {
-  "session_count": 182,
+  "session_count": 183,
   "start_date": "2026-09-22",
   "current_day": 23,
   "current_phase": 2,
@@ -30,10 +30,19 @@
     "os_mem_001",
     "algo_rec_001",
     "db_norm_001",
-    "ga_spatial_001"
+    "ga_spatial_001",
+    "coa_hazard_001",
+    "coa_pipe_001",
+    "coa_cache_001",
+    "ga_analytical_001",
+    "cd_lr_001",
+    "os_disk_001",
+    "cn_tcp_001",
+    "dl_float_001",
+    "os_sched_001",
+    "toc_undec_001"
   ],
   "session_themes": [
-    "Computer Organization & Architecture — Machine Instructions & Addressing",
     "Programming & Data Structures — Programming in C",
     "Discrete Mathematics — Mathematical Logic",
     "Computer Organization & Architecture — I/O Interface",
@@ -82,10 +91,11 @@
     "Operating Systems — Processes & Threads",
     "Computer Organization & Architecture — Memory Hierarchy",
     "Discrete Mathematics — Graph Theory",
-    "Programming & Data Structures — Programming in C"
+    "Programming & Data Structures — Programming in C",
+    "Computer Organization & Architecture — Instruction Pipelining"
   ],
   "topic_history": {},
-  "ga_rotation_index": 2,
+  "ga_rotation_index": 3,
   "concept_tracker": {},
   "syllabus_progress": {
     "Computer Organization & Architecture": [
