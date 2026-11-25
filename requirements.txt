@@ -1,3 +1,4 @@
-# No external dependencies needed for the quiz bot.
-# All modules used are Python stdlib (json, logging, random, datetime, pathlib, urllib).
-# feedparser was only needed for the old news pipeline and is no longer required.
+# No external dependencies required.
+# All modules use Python standard library only:
+#   json, logging, random, re, datetime, pathlib, urllib
+# Compatible with Python 3.10+
