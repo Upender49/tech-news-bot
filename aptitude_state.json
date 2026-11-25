@@ -1,11 +1,26 @@
 {
-  "session_count": 0,
+  "session_count": 1,
   "start_date": "2026-11-25",
   "current_phase": 1,
-  "phase_rotation_index": 0,
-  "sent_ids": [],
-  "session_themes": [],
-  "topic_history": {},
+  "phase_rotation_index": 1,
+  "sent_ids": [
+    "pct_005",
+    "pct_001",
+    "pct_003",
+    "pct_004",
+    "pct_002",
+    "rat_001",
+    "rat_005",
+    "ma_007",
+    "ma_008",
+    "pld_004"
+  ],
+  "session_themes": [
+    "Percentages"
+  ],
+  "topic_history": {
+    "Percentages": 1
+  },
   "topic_stats": {},
   "weak_topics": [],
   "phase_completion": {}
