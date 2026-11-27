@@ -1,8 +1,8 @@
 {
-  "session_count": 5,
+  "session_count": 6,
   "start_date": "2026-11-25",
-  "current_phase": 8,
-  "phase_rotation_index": 5,
+  "current_phase": 3,
+  "phase_rotation_index": 6,
   "sent_ids": [
     "pct_005",
     "pct_001",
@@ -53,21 +53,33 @@
     "pnc_002",
     "pld_008",
     "mix_004",
-    "lr_010"
+    "lr_010",
+    "pld_005",
+    "pld_010",
+    "pld_009",
+    "pld_003",
+    "pld_007",
+    "pld_006",
+    "pld_002",
+    "sr_004",
+    "tw_010",
+    "pipe_001"
   ],
   "session_themes": [
     "Percentages",
     "Number System",
     "Time & Work",
     "Time Speed Distance",
-    "Permutations & Combinations"
+    "Permutations & Combinations",
+    "Profit Loss Discounts"
   ],
   "topic_history": {
     "Percentages": 1,
     "Number System": 1,
     "Time & Work": 1,
     "Time Speed Distance": 1,
-    "Permutations & Combinations": 1
+    "Permutations & Combinations": 1,
+    "Profit Loss Discounts": 1
   },
   "topic_stats": {},
   "weak_topics": [],
