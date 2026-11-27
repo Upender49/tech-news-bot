@@ -1,8 +1,8 @@
 {
-  "session_count": 3,
+  "session_count": 4,
   "start_date": "2026-11-25",
-  "current_phase": 4,
-  "phase_rotation_index": 3,
+  "current_phase": 5,
+  "phase_rotation_index": 4,
   "sent_ids": [
     "pct_005",
     "pct_001",
@@ -33,17 +33,29 @@
     "tw_006",
     "ma_002",
     "ma_006",
-    "di_004"
+    "di_004",
+    "tsd_002",
+    "tsd_003",
+    "tsd_005",
+    "tsd_001",
+    "tsd_006",
+    "tsd_010",
+    "tsd_007",
+    "ma_001",
+    "ma_004",
+    "avg_001"
   ],
   "session_themes": [
     "Percentages",
     "Number System",
-    "Time & Work"
+    "Time & Work",
+    "Time Speed Distance"
   ],
   "topic_history": {
     "Percentages": 1,
     "Number System": 1,
-    "Time & Work": 1
+    "Time & Work": 1,
+    "Time Speed Distance": 1
   },
   "topic_stats": {},
   "weak_topics": [],
